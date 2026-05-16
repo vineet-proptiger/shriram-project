@@ -7,10 +7,10 @@ const F_JOST = 'var(--font-jost), Montserrat, sans-serif'
 const F_SANS = 'var(--font-sans), Open Sans, sans-serif'
 
 const plans = [
-  { label: 'Site Master Plan',     img: masterplanImages.masterPlan },
-  { label: '2 BHK — 818 Sq.ft.',  img: masterplanImages.bhk2       },
-  { label: '2.5 BHK — 1157 Sq.ft.', img: masterplanImages.bhk25    },
-  { label: '3 BHK — 1285 Sq.ft.', img: masterplanImages.bhk3       },
+  { label: 'Site Master Plan', img: masterplanImages.masterPlan },
+  { label: '2 BHK Floor Plan', img: masterplanImages.bhk25 },
+  { label: '2.5 BHK Floor Plan', img: masterplanImages.bhk25 },
+  { label: '3 BHK Floor Plan', img: masterplanImages.bhk3 },
 ]
 
 const MasterPlan = ({ setIsOpen }) => {
@@ -63,7 +63,7 @@ const MasterPlan = ({ setIsOpen }) => {
                   fontFamily: F_JOST, fontWeight: '700', fontSize: '13px',
                   color: '#fff', margin: 0, letterSpacing: '0.06em', textTransform: 'uppercase'
                 }}>
-                  Select Floor Plan
+                  Master Plan
                 </p>
                 <p style={{
                   fontFamily: F_SANS, fontSize: '11px',

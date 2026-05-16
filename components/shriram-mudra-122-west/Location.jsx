@@ -163,7 +163,7 @@ const Location = () => {
                 background: 'linear-gradient(90deg, var(--color-teal), var(--color-teal-light))', zIndex: 10,
               }} />
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.0399!2d80.0990!3d13.0457!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52601a57d85c91%3A0x73bdb5e64d9e5b1d!2sMangadu%2C%20Chennai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1716000000000!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3203.840128363508!2d80.1149992!3d13.027802200000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5261e3fc15854b%3A0xfb1248ce84734a7f!2sShriram%20122%20West!5e1!3m2!1sen!2sin!4v1778928675811!5m2!1sen!2sin"
                 width="100%"
                 height="100%"
                 style={{ border: 0, minHeight: '420px', display: 'block' }}
