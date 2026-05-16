@@ -7,9 +7,9 @@ const PRIMARY = "var(--color-primary)";
 const units = [
   {
     type: "3 BHK",
-    size: "1200 - 1350 Sq.ft",
+    size: "On Request",
     price: "₹ 1.51 Cr*",
-    oldPrice: "₹ 1.60 Cr*",
+    oldPrice: null,
     btnText: "Get Cost Sheet",
     features: [
       "3 Bedrooms (Spacious & Airy)",
@@ -19,31 +19,31 @@ const units = [
     isPopular: false,
   },
   {
-    type: "3 BHK Premium",
-    size: "1400 - 1600 Sq.ft",
+    type: "3 BHK + Study",
+    size: "On Request",
     price: "Ask For Price",
     oldPrice: null,
-    btnText: "Get Cost Sheet",
+    btnText: "Ask For Price",
     features: [
       "3 Bedrooms (Grand Suite)",
-      "3 Bathrooms (Luxury Fittings)",
-      "1 Hall (Expansive Deck Area)"
-    ],
-    isPopular: true,
-  },
-  {
-    type: "3 BHK Luxury",
-    size: "1650 Sq.ft",
-    price: "Ask For Price",
-    oldPrice: null,
-    btnText: "Get Cost Sheet",
-    features: [
-      "3 Bedrooms (Ultra-Premium Suite)",
-      "3 Bathrooms (Premium Fittings)",
-      "1 Hall (Grand Living Space)"
+      "1 Study Room (Flexible Space)",
+      "3 Bathrooms (Luxury Fittings)"
     ],
     isPopular: false,
   },
+  // {
+  //   type: "3 BHK Luxury",
+  //   size: "1650 Sq.ft",
+  //   price: "Ask For Price",
+  //   oldPrice: null,
+  //   btnText: "Get Cost Sheet",
+  //   features: [
+  //     "3 Bedrooms (Ultra-Premium Suite)",
+  //     "3 Bathrooms (Premium Fittings)",
+  //     "1 Hall (Grand Living Space)"
+  //   ],
+  //   isPopular: false,
+  // },
 ];
 
 const Pricing = ({ setIsOpen }) => {
@@ -83,7 +83,7 @@ const Pricing = ({ setIsOpen }) => {
           <div className="w-20 h-1 mx-auto rounded-full mb-6" style={{ background: GOLD }} />
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 max-w-3xl mx-auto">
           {units.map((unit, idx) => (
             <div
               key={idx}

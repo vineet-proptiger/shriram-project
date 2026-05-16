@@ -6,36 +6,6 @@ const F_SANS = 'var(--font-sans), Open Sans, sans-serif'
 
 const locationCategories = [
   {
-    title: 'Commute',
-    icon: (
-      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" /><circle cx="12" cy="10" r="3" />
-      </svg>
-    ),
-    items: [
-      { name: 'Perungalathur Railway Station', time: '0.5 km' },
-      { name: 'GST Road Bus Stop', time: '0.2 km' },
-      { name: 'Chromepet Railway Station', time: '4 km' },
-      { name: 'Tambaram Bus Stand', time: '3.5 km' },
-      { name: 'Chennai International Airport', time: '12 km' },
-    ],
-  },
-  {
-    title: 'Healthcare',
-    icon: (
-      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
-      </svg>
-    ),
-    items: [
-      { name: 'Balaji Hospital', time: '2.5 km' },
-      { name: 'Government Hospital Tambaram', time: '4 km' },
-      { name: 'Saveetha Medical College', time: '7 km' },
-      { name: 'Sri Ramachandra Hospital', time: '10 km' },
-      { name: 'Apollo Hospital Greams Road', time: '18 km' },
-    ],
-  },
-  {
     title: 'Education',
     icon: (
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -43,56 +13,66 @@ const locationCategories = [
       </svg>
     ),
     items: [
-      { name: 'DAV School Perungalathur', time: '1.8 km' },
-      { name: 'Velammal Vidyalaya', time: '3.5 km' },
-      { name: 'Saveetha Engineering College', time: '5 km' },
-      { name: 'SRM University', time: '6 km' },
-      { name: 'Amrita School of Engineering', time: '8 km' },
+      { name: 'Velammal Vidyashram', time: '3 km' },
+      { name: 'Zion International Public School', time: '2 km' },
+      { name: 'Alwin International Public School', time: '2.5 km' },
+      { name: 'SRM University', time: '10 km' },
     ],
   },
   {
-    title: 'Shopping',
+    title: 'Hospitals',
+    icon: (
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+      </svg>
+    ),
+    items: [
+      { name: 'Annai Arul Hospital', time: '3 km' },
+      { name: 'Hindu Mission Hospital', time: '6 km' },
+      { name: 'Deepam Hospital', time: '7 km' },
+      { name: 'SRM Medical College Hospital', time: '10 km' },
+    ],
+  },
+  {
+    title: 'Food & Shopping',
     icon: (
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" /><line x1="3" y1="6" x2="21" y2="6" /><path d="M16 10a4 4 0 0 1-8 0" />
       </svg>
     ),
     items: [
-      { name: 'D-Mart Perungalathur', time: '1.5 km' },
-      { name: 'Grand Square Mall Chromepet', time: '4 km' },
-      { name: 'Big Bazaar Tambaram', time: '4.5 km' },
-      { name: "Spencer's Retail", time: '5 km' },
-      { name: 'Phoenix MarketCity', time: '10 km' },
+      { name: 'Grand Galada Centre Mall', time: '8 km' },
+      { name: 'Gold Souk Grande', time: '12 km' },
+      { name: 'Phoenix Marketcity', time: '20 km' },
+      { name: 'Local Retail & Dining Hubs', time: 'Nearby' },
     ],
   },
   {
-    title: 'Entertainment',
+    title: 'Growth Drivers',
     icon: (
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <circle cx="12" cy="12" r="10" /><circle cx="12" cy="12" r="3" /><line x1="12" y1="2" x2="12" y2="5" /><line x1="12" y1="19" x2="12" y2="22" /><line x1="2" y1="12" x2="5" y2="12" /><line x1="19" y1="12" x2="22" y2="12" />
+        <polyline points="22 7 13.5 15.5 8.5 10.5 2 17" /><polyline points="16 7 22 7 22 13" />
       </svg>
     ),
     items: [
-      { name: 'Arignar Anna Zoological Park', time: '8 km' },
-      { name: 'Guindy National Park', time: '10 km' },
-      { name: 'MGM Dizzee World', time: '12 km' },
-      { name: 'VGP Golden Beach', time: '15 km' },
-      { name: 'Marina Beach', time: '20 km' },
+      { name: 'GST Road', time: '1 km' },
+      { name: 'Perungalathur Railway Station', time: '2 km' },
+      { name: 'Tambaram', time: '5 km' },
+      { name: 'Upcoming Infrastructure Developments', time: 'Nearby' },
     ],
   },
   {
-    title: 'Food',
+    title: 'Convenient Travel',
     icon: (
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M18 8h1a4 4 0 0 1 0 8h-1" /><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z" /><line x1="6" y1="1" x2="6" y2="4" /><line x1="10" y1="1" x2="10" y2="4" /><line x1="14" y1="1" x2="14" y2="4" />
+        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" /><circle cx="12" cy="10" r="3" />
       </svg>
     ),
     items: [
-      { name: 'Saravana Bhavan', time: '1.5 km' },
-      { name: 'Biryani Zone', time: '1.2 km' },
-      { name: 'Hotel Sangam', time: '2 km' },
-      { name: 'Junior Kuppanna', time: '3.5 km' },
-      { name: 'Anjappar Chettinad Restaurant', time: '4 km' },
+      { name: 'Chennai International Airport', time: '15 km' },
+      { name: 'Tambaram Railway Station', time: '5 km' },
+      { name: 'Perungalathur Bus Terminus', time: '2 km' },
+      { name: 'Easy Access to GST Road & OMR', time: 'Nearby' },
     ],
   },
 ]
@@ -244,7 +224,7 @@ const Location = () => {
                 background: 'linear-gradient(90deg, var(--color-teal), var(--color-teal-light))', zIndex: 10,
               }} />
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.264!2d80.074!3d12.882!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52f5b30c44df31%3A0xd45a02e59d218da9!2sPerungalathur%2C%20Chennai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1716000000000!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3205.430609785591!2d80.09641959999999!3d12.904297399999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52f75001d98cf3%3A0xc1676dfcf42f9b0!2sShriram%20Park%2063!5e1!3m2!1sen!2sin!4v1778912006817!5m2!1sen!2sin"
                 width="100%"
                 height="100%"
                 style={{ border: 0, minHeight: '420px', display: 'block' }}
