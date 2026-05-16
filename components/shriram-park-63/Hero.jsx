@@ -157,29 +157,31 @@ const Hero = ({ setIsOpen }) => {
 
           <div className="p-4 flex flex-col gap-3">
             {/* ── New Launch Badge ── */}
-            <div
-              className="flex justify-center -mt-2 mb-1"
-              data-aos="zoom-in"
-              data-aos-delay="400"
-            >
-              <span
-                style={{
-                  background: "var(--color-teal-bg)",
-                  color: "var(--color-teal)",
-                  padding: "4px 14px",
-                  borderRadius: "50px",
-                  fontSize: "11px",
-                  fontWeight: "700",
-                  textTransform: "uppercase",
-                  letterSpacing: "0.1em",
-                  border: "1px solid var(--color-teal-light)",
-                  boxShadow: "0 2px 8px rgba(181,135,40,0.12)",
-                  fontFamily: F_JOST,
-                }}
+            {/*
+              <div
+                className="flex justify-center -mt-2 mb-1"
+                data-aos="zoom-in"
+                data-aos-delay="400"
               >
-                Ready to Move-In
-              </span>
-            </div>
+                <span
+                  style={{
+                    background: "var(--color-teal-bg)",
+                    color: "var(--color-teal)",
+                    padding: "4px 14px",
+                    borderRadius: "50px",
+                    fontSize: "11px",
+                    fontWeight: "700",
+                    textTransform: "uppercase",
+                    letterSpacing: "0.1em",
+                    border: "1px solid var(--color-teal-light)",
+                    boxShadow: "0 2px 8px rgba(181,135,40,0.12)",
+                    fontFamily: F_JOST,
+                  }}
+                >
+                  Ready to Move-In
+                </span>
+              </div>
+            */}
 
             {/* ── Project Identity ── */}
             <div
