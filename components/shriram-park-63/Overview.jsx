@@ -20,7 +20,7 @@ const F_SERIF = "var(--font-serif), Cormorant Garamond, serif";
 
 const PREVIEW_TEXT = `Shriram Park 63 is a thoughtfully planned residential development in Chennai, offering a harmonious blend of urban convenience and serene living. Located in Perungalathur along the rapidly developing GST Road corridor, the project ensures seamless connectivity to key destinations while maintaining a peaceful and well-planned environment.`;
 
-const MORE_TEXT = ` Developed by Shriram Properties, the project reflects modern architecture, efficient layouts, and a strong focus on lifestyle-driven living. Designed for both end-users and investors, it offers long-term value along with a comfortable and contemporary living experience. With 40+ state-of-the-art amenities, statuesque high-rise towers, and MIVAN construction technology, Shriram Park 63 sets a new benchmark in quality living.`;
+const MORE_TEXT = ` Developed by Shriram Properties, the project reflects modern architecture, efficient layouts, and a strong focus on lifestyle-driven living. Designed for both end-users and investors, it offers long-term value along with a comfortable and contemporary living experience.`;
 
 
 

@@ -2,14 +2,12 @@
 import React, { useState } from "react";
 
 import {
-  Dumbbell,
-  BookOpen,
-  HeartPulse,
-  Laptop,
-  UtensilsCrossed,
-  Trophy,
-  Waves,
+  MapPin,
   Trees,
+  Navigation,
+  Share2,
+  Building,
+  Waves,
 } from "lucide-react";
 
 const F_SANS = "var(--font-sans), Open Sans, sans-serif";
@@ -19,36 +17,28 @@ const highlightIconProps = { size: 26, strokeWidth: 1.5 };
 
 const highlights = [
   {
-    text: "Gymnasium & Fitness",
-    icon: <Dumbbell {...highlightIconProps} />,
+    text: "Prime location at Perungalathur near GST Road, Chennai",
+    icon: <MapPin {...highlightIconProps} />,
   },
   {
-    text: "Library & Reading Lounge",
-    icon: <BookOpen {...highlightIconProps} />,
-  },
-  {
-    text: "Health & Wellness Club",
-    icon: <HeartPulse {...highlightIconProps} />,
-  },
-  {
-    text: "Co-Working & Business Space",
-    icon: <Laptop {...highlightIconProps} />,
-  },
-  {
-    text: "Banquet & Event Hall",
-    icon: <UtensilsCrossed {...highlightIconProps} />,
-  },
-  {
-    text: "Club & Leisure Area",
-    icon: <Trophy {...highlightIconProps} />,
-  },
-  {
-    text: "Swimming & Lap Pool",
-    icon: <Waves {...highlightIconProps} />,
-  },
-  {
-    text: "Landscape & Open Gardens",
+    text: "Landscaped gardens and green open spaces",
     icon: <Trees {...highlightIconProps} />,
+  },
+  {
+    text: "Easy access to Chennai–Bangalore Highway",
+    icon: <Navigation {...highlightIconProps} />,
+  },
+  {
+    text: "Well connected to Porur, Poonamallee & IT corridors",
+    icon: <Share2 {...highlightIconProps} />,
+  },
+  {
+    text: "Modern apartments with smart layouts",
+    icon: <Building {...highlightIconProps} />,
+  },
+  {
+    text: "Lifestyle amenities including clubhouse & fitness zones",
+    icon: <Waves {...highlightIconProps} />,
   },
 ];
 
@@ -205,7 +195,7 @@ const Highlights = ({ setIsOpen }) => (
       </div>
 
       {/* 3-column card grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {highlights.map((item, idx) => (
           <HighlightCard
             key={idx}
