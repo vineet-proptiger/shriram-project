@@ -8,41 +8,41 @@ const locationCategories = [
   {
     title: 'Education',
     items: [
-      { name: 'DAV School, Porur', dist: '2 km' },
-      { name: 'Sri Ramachandra University', dist: '3 km' },
-      { name: 'Hindustan International School', dist: '4 km' },
+      { name: 'Maharishi Vidya Mandir, Mangadu', dist: '0.5 km' },
+      { name: 'Panimalar Engineering College', dist: '2 km' },
+      { name: 'Sri Ramachandra Medical University, Porur', dist: '4 km' },
     ]
   },
   {
     title: 'Hospitals',
     items: [
-      { name: 'Sri Ramachandra Hospital', dist: '3.5 km' },
-      { name: 'Apollo Hospital, Vanagaram', dist: '5 km' },
-      { name: 'Billroth Hospitals', dist: '6 km' },
+      { name: 'Taj Hospital, Mangadu', dist: '0.5 km' },
+      { name: 'Sri Muthukumaran Medical College Hospital', dist: '3 km' },
+      { name: 'MIOT International Hospital, Porur', dist: '5 km' },
     ]
   },
   {
     title: 'Food & Shopping',
     items: [
-      { name: 'VR Mall, Chennai', dist: '8 km' },
-      { name: 'Phoenix Market City', dist: '12 km' },
-      { name: 'Porur Lake Market', dist: '2 km' },
+      { name: 'D-Mart, Mangadu', dist: '2.8 km' },
+      { name: 'Grand Galada Centre Mall', dist: '4 km' },
+      { name: 'Reliance Fresh, Porur', dist: '3 km' },
     ]
   },
   {
-    title: 'Growth Drivers',
+    title: 'IT Parks & Business',
     items: [
-      { name: 'DLF IT Park, Manapakkam', dist: '6 km' },
-      { name: 'Ramapuram IT Corridor', dist: '5 km' },
-      { name: 'Porur Technology Hub', dist: '3 km' },
+      { name: 'Olympia Tech Park, Porur', dist: '4 km' },
+      { name: 'India Land Tech Park', dist: '5 km' },
+      { name: 'Greenways Business Park', dist: '4 km' },
     ]
   },
   {
-    title: 'Convenient Travel',
+    title: 'Connectivity',
     items: [
+      { name: 'Pattur Mangadu Bus Stop', dist: '0.3 km' },
       { name: 'Chennai–Bangalore Highway (NH-48)', dist: '1 km' },
-      { name: 'Porur Bus Terminus', dist: '2.5 km' },
-      { name: 'Upcoming Metro Station', dist: '4 km' },
+      { name: 'Chennai International Airport', dist: '14 km' },
     ]
   }
 ];
