@@ -1,8 +1,8 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { logoImages } from "../../../lib/optima-rajarhat/images";
-import AosInit from "../../../components/optima-rajarhat/AosInit";
+import { logoImages } from "../../../lib/shriram-mudra-122-west/images";
+import AosInit from "../../../components/shriram-mudra-122-west/AosInit";
 
 const GOLD = "var(--color-teal)";
 const GOLD_DARK = "var(--color-teal-dark)";
@@ -33,16 +33,16 @@ export default function PrivacyPolicy() {
         ></div>
 
         <div className="container mx-auto px-4 md:px-8 flex items-center justify-between h-[80px]">
-          <Link href="/optima-rajarhat" className="flex items-center">
+          <Link href="/shriram-mudra-122-west" className="flex items-center">
             <img
               src={logoImages.tarc}
-              alt="Srijan Optima"
+              alt="Shriram Mudra"
               className="h-10 md:h-16 w-auto object-contain"
               style={{ maxWidth: '250px' }}
             />
           </Link>
           <Link
-            href="/optima-rajarhat"
+            href="/shriram-mudra-122-west"
             className="btn-teal shadow-lg !text-[11px] !px-3 !py-2 sm:!text-sm sm:!px-6 sm:!py-3"
           >
             <span className="hidden sm:inline">BACK TO HOME</span>
@@ -79,7 +79,7 @@ export default function PrivacyPolicy() {
             style={{ fontFamily: "var(--font-sans)" }}
           >
             <Link
-              href="/optima-rajarhat"
+              href="/shriram-mudra-122-west"
               className="hover:text-white transition-colors"
               style={{ color: "var(--color-teal)" }}
             >
@@ -120,7 +120,7 @@ export default function PrivacyPolicy() {
                 rel="noopener noreferrer"
                 style={{ color: "var(--color-teal-dark)", fontWeight: "600" }}
               >
-                Srijan Optima
+                Shriram Mudra
               </a>{" "}
               (Authorized Marketing Partner), we respect your privacy and are
               committed to safeguarding your personal data. This Privacy Policy
@@ -338,9 +338,9 @@ export default function PrivacyPolicy() {
             fontFamily: "var(--font-sans)",
           }}
         >
-          &copy; 2026 Srijan Optima. All rights reserved |{" "}
+          &copy; 2026 Shriram Mudra. All rights reserved |{" "}
           <Link
-            href="/optima-rajarhat"
+            href="/shriram-mudra-122-west"
             style={{ color: "var(--color-teal)", textDecoration: "none" }}
           >
             Back to Home

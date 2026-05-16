@@ -1,6 +1,6 @@
 'use client'
 import React, { useState } from 'react'
-import { PROJECT_ID, PROJECT_NAME, API_ENDPOINT, SHEET_NAME, SECRET_KEY, CITY_DISPLAY } from '../../lib/optima-rajarhat/config'
+import { PROJECT_ID, PROJECT_NAME, API_ENDPOINT, SHEET_NAME, SECRET_KEY, CITY_DISPLAY } from '../../lib/shriram-mudra-122-west/config'
 import { buildTrackingFields } from '../../lib/formMeta'
 
 const TEAL = 'var(--color-teal)'
@@ -134,7 +134,7 @@ const AboutDeveloper = ({ setIsOpen }) => (
           fontSize: '11px', fontWeight: '700', color: 'var(--color-teal)',
           fontFamily: F_JOST, letterSpacing: '0.1em', textTransform: 'uppercase',
           border: '1px solid var(--color-teal-light)', marginBottom: '10px',
-        }}>Srijan Realty — Developer Profile</span>
+        }}>Shriram Properties — Developer Profile</span>
         <h2 style={{
           fontFamily: F_JOST, fontWeight: '800', fontSize: '26px',
           color: PRIMARY, margin: '0 0 8px', letterSpacing: '-0.01em',
@@ -184,7 +184,7 @@ const AboutDeveloper = ({ setIsOpen }) => (
               </div>
               <div>
                 <h3 style={{ fontFamily: F_JOST, fontWeight: '800', fontSize: '18px', color: '#fff', margin: '0 0 4px', letterSpacing: '-0.01em' }}>
-                  Srijan Optima
+                  Shriram Mudra
                 </h3>
               </div>
             </div>
@@ -192,14 +192,14 @@ const AboutDeveloper = ({ setIsOpen }) => (
 
           <div style={{ padding: '24px 28px', flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
             <p style={{ color: '#555', fontFamily: F_SANS, lineHeight: 1.85, fontSize: '14px', margin: '0 0 14px' }}>
-              Srijan Realty is one of Kolkata&apos;s most trusted real estate developers, known for delivering quality residential and commercial projects across Eastern India. With a strong legacy of excellence and commitment to modern living standards, Srijan Realty brings world-class developments to Kolkata&apos;s most sought-after locations. Srijan Optima is their flagship offering in Rajarhat — an 11.3-acre premium residential project redefining modern living on Rajarhat Main Road.
+              Shriram Properties is a leading real estate developer based in Chennai, with over three decades of excellence in delivering quality residential projects across South India. Known for its commitment to quality construction, thoughtful design, and customer-centric approach, Shriram Properties has created vibrant communities that thousands of families proudly call home. Shriram Mudra is their premium offering in Mangadu — a thoughtfully designed residential project offering 2, 2.5 &amp; 3 BHK apartments near Porur and the Chennai–Bangalore Highway.
             </p>
 
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '10px', marginBottom: '22px' }}>
               {[
-                { value: '11.3', label: 'Acres — Rajarhat Main Road' },
-                { value: '70%', label: 'Open Green Spaces' },
-                { value: '₹65 Lacs+', label: 'Starting Price' },
+                { value: '~5',     label: 'Acres — Mangadu, Chennai' },
+                { value: '30+',    label: 'Years of Excellence' },
+                { value: '₹58 Lacs+', label: 'Starting Price' },
               ].map((stat, i) => (
                 <div key={i} style={{
                   textAlign: 'center', padding: '14px 8px',

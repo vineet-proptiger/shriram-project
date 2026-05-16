@@ -5,16 +5,17 @@
 // ═══════════════════════════════════════════════════════════════
 
 /* ─── CONFIG ─────────────────────────────────────────────────── */
-import * as optima   from '../../../lib/optima-rajarhat/config'
-import * as shriram  from '../../../lib/shriram-codename-pudhiya/config'
-import * as park63   from '../../../lib/shriram-park-63/config'
+import * as mudra from '../../../lib/shriram-mudra-122-west/config'
+import * as shriram from '../../../lib/shriram-codename-pudhiya/config'
+import * as park63 from '../../../lib/shriram-park-63/config'
 
 const PROJECTS = {
-  [optima.PROJECT_ID]:  optima,
+  [mudra.PROJECT_ID]: mudra,
   [shriram.PROJECT_ID]: shriram,
-  [park63.PROJECT_ID]:  park63,
+  [park63.PROJECT_ID]: park63,
 }
 /* ────────────────────────────────────────────────────────────── */
+
 
 function clean(v) {
   return (v ?? '').toString().trim().replace(/<[^>]*>/g, '')
@@ -85,11 +86,11 @@ export async function POST(request) {
     const comments = get('comments')
 
     /* ── Project config (lookup from registry) ── */
-    const projectConfig  = PROJECTS[projectId] || {}
-    const cityId         = projectConfig.CITY_ID       || ''
-    const citySlug       = projectConfig.CITY_SLUG      || ''
-    const sheetWebhook   = projectConfig.SHEET_WEBHOOK  || ''
-    const PROPTIGER_URL  = projectConfig.PROPTIGER_URL  || ''
+    const projectConfig = PROJECTS[projectId] || {}
+    const cityId = projectConfig.CITY_ID || ''
+    const citySlug = projectConfig.CITY_SLUG || ''
+    const sheetWebhook = projectConfig.SHEET_WEBHOOK || ''
+    const PROPTIGER_URL = projectConfig.PROPTIGER_URL || ''
 
     /* ── 1. Google Sheet ── */
     const sheetPayload = new URLSearchParams({

@@ -1,6 +1,6 @@
 'use client'
 import React, { useState } from 'react'
-import { Map, Building2, Building, Trees, Waves, MapPin } from 'lucide-react'
+import { Map, Building2, Bike, Trees, Waves, MapPin } from 'lucide-react'
 
 const F_SANS = 'var(--font-sans), Open Sans, sans-serif'
 const F_JOST = 'var(--font-jost), Montserrat, sans-serif'
@@ -8,12 +8,12 @@ const F_JOST = 'var(--font-jost), Montserrat, sans-serif'
 const highlightIconProps = { size: 26, strokeWidth: 1.5 }
 
 const highlights = [
-  { text: 'Prime Location in Rajarhat',            icon: <Map {...highlightIconProps} />            },
-  { text: 'Contemporary High-Rise Living',         icon: <Building2 {...highlightIconProps} />      },
-  { text: 'Spacious & Well-Planned Residences',    icon: <Building {...highlightIconProps} />       },
-  { text: 'Lush Green Landscaped Zones',           icon: <Trees {...highlightIconProps} />          },
-  { text: 'Modern Lifestyle Amenities',            icon: <Waves {...highlightIconProps} />          },
-  { text: 'Seamless New Town & Airport Connectivity', icon: <MapPin {...highlightIconProps} />       },
+  { text: 'Prime location at Mangadu near Porur, Chennai', icon: <Map {...highlightIconProps} />       },
+  { text: 'Landscaped gardens and green open spaces',      icon: <Trees {...highlightIconProps} />     },
+  { text: 'Easy access to Chennai–Bangalore Highway',      icon: <Bike {...highlightIconProps} />      },
+  { text: 'Well connected to Porur, Poonamallee & IT corridors', icon: <MapPin {...highlightIconProps} /> },
+  { text: 'Modern apartments with smart layouts',          icon: <Building2 {...highlightIconProps} /> },
+  { text: 'Lifestyle amenities including clubhouse & fitness zones', icon: <Waves {...highlightIconProps} /> },
 ]
 
 const HighlightCard = ({ item, idx }) => {
@@ -79,10 +79,10 @@ const Highlights = ({ setIsOpen }) => (
           fontSize: '11px', fontWeight: '700', color: 'var(--color-teal)',
           fontFamily: F_JOST, letterSpacing: '0.1em', textTransform: 'uppercase',
           border: '1px solid var(--color-teal-light)', marginBottom: '10px',
-        }}>Rajarhat, Kolkata — Project Excellence</span>
+        }}>Mangadu, Chennai — Project Excellence</span>
         <h2 style={{ fontFamily: F_JOST, fontWeight: '800', fontSize: '26px', color: '#111827', margin: 0, letterSpacing: '-0.01em' }}>
           Highlights Gallery:{' '}
-          <span style={{ color: 'var(--color-teal)' }}>Srijan Optima</span>
+          <span style={{ color: 'var(--color-teal)' }}>Shriram Mudra</span>
         </h2>
         <div style={{ display: 'flex', justifyContent: 'center', marginTop: '10px' }}>
           <span style={{ display: 'block', width: '40px', height: '3px', background: 'linear-gradient(90deg, var(--color-teal), var(--color-teal-light))', borderRadius: '2px' }} />

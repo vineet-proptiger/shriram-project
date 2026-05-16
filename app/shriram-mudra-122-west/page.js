@@ -2,23 +2,23 @@
 import { useState } from 'react'
 import dynamic from 'next/dynamic'
 
-import Navbar from '../../components/optima-rajarhat/Navbar'
-import Hero from '../../components/optima-rajarhat/Hero'
+import Navbar from '../../components/shriram-mudra-122-west/Navbar'
+import Hero from '../../components/shriram-mudra-122-west/Hero'
 
-const Overview       = dynamic(() => import('../../components/optima-rajarhat/Overview'),       { ssr: true })
-const Highlights     = dynamic(() => import('../../components/optima-rajarhat/Highlights'),     { ssr: true })
-const Amenities      = dynamic(() => import('../../components/optima-rajarhat/Amenities'),      { ssr: true })
-const Pricing        = dynamic(() => import('../../components/optima-rajarhat/Pricing'),        { ssr: true })
-const Location       = dynamic(() => import('../../components/optima-rajarhat/Location'),       { ssr: true })
-const MasterPlan     = dynamic(() => import('../../components/optima-rajarhat/MasterPlan'),     { ssr: true })
-const AboutDeveloper = dynamic(() => import('../../components/optima-rajarhat/AboutDeveloper'), { ssr: true })
-const Footer         = dynamic(() => import('../../components/optima-rajarhat/Footer'),         { ssr: true })
+const Overview       = dynamic(() => import('../../components/shriram-mudra-122-west/Overview'),       { ssr: true })
+const Highlights     = dynamic(() => import('../../components/shriram-mudra-122-west/Highlights'),     { ssr: true })
+const Amenities      = dynamic(() => import('../../components/shriram-mudra-122-west/Amenities'),      { ssr: true })
+const Pricing        = dynamic(() => import('../../components/shriram-mudra-122-west/Pricing'),        { ssr: true })
+const Location       = dynamic(() => import('../../components/shriram-mudra-122-west/Location'),       { ssr: true })
+const MasterPlan     = dynamic(() => import('../../components/shriram-mudra-122-west/MasterPlan'),     { ssr: true })
+const AboutDeveloper = dynamic(() => import('../../components/shriram-mudra-122-west/AboutDeveloper'), { ssr: true })
+const Footer         = dynamic(() => import('../../components/shriram-mudra-122-west/Footer'),         { ssr: true })
 
-const Gallery      = dynamic(() => import('../../components/optima-rajarhat/Gallery'),      { ssr: false })
-const EnquireModal = dynamic(() => import('../../components/optima-rajarhat/EnquireModal'), { ssr: false })
-const AosInit      = dynamic(() => import('../../components/optima-rajarhat/AosInit'),      { ssr: false })
+const Gallery      = dynamic(() => import('../../components/shriram-mudra-122-west/Gallery'),      { ssr: false })
+const EnquireModal = dynamic(() => import('../../components/shriram-mudra-122-west/EnquireModal'), { ssr: false })
+const AosInit      = dynamic(() => import('../../components/shriram-mudra-122-west/AosInit'),      { ssr: false })
 
-export default function OptimaRajarhat() {
+export default function ShriramMudraPage() {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
@@ -74,7 +74,7 @@ export default function OptimaRajarhat() {
           <span style={{ fontSize: '9px', fontWeight: '600', letterSpacing: '0.04em', fontFamily: 'var(--font-jost)' }}>Enquire</span>
         </button>
         <a
-          href="https://wa.me/919718344024?text=Hi%20I%20am%20interested%20in%20Srijan%20Optima%20Rajarhat"
+          href="https://wa.me/919718344024?text=Hi%20I%20am%20interested%20in%20Shriram%20Mudra%20Mangadu%20Chennai"
           target="_blank" rel="noopener noreferrer"
           className="flex-1 flex flex-col items-center justify-center gap-0.5 py-2 !px-0 text-white transition-all"
           style={{ background: '#25D366', fontFamily: 'var(--font-sans)' }}

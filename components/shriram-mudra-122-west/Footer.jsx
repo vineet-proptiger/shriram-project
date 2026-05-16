@@ -10,26 +10,26 @@ const Footer = () => (
 
     <div style={{ maxWidth: '860px', margin: '0 auto', padding: '56px 24px 32px', textAlign: 'center' }}>
       <h2 style={{ fontSize: '24px', fontWeight: '800', fontFamily: F_JOST, marginBottom: '6px', textTransform: 'uppercase', letterSpacing: '0.05em' }} data-aos="fade-in">
-        Srijan Optima
+        Shriram Mudra
       </h2>
       <p style={{ fontSize: '13px', color: 'var(--color-teal)', fontFamily: F_JOST, fontWeight: '700', letterSpacing: '1.5px', textTransform: 'uppercase', marginBottom: '12px' }}>
-        New Launch — Rajarhat Main Road, Kolkata. By Srijan Realty.
+        New Launch — Shriram 122 West, Mangadu, Chennai. By Shriram Properties.
       </p>
       <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '24px' }}>
         <span style={{ width: '36px', height: '2.5px', background: 'linear-gradient(90deg, var(--color-teal), var(--color-teal-light))', borderRadius: '2px' }} />
       </div>
       <p style={{ fontSize: '15px', color: '#bbb', fontFamily: F_SANS, lineHeight: 1.8, marginBottom: '32px', textAlign: 'justify' }}
         data-aos="fade-in" data-aos-delay="100">
-        Srijan Optima is a premium residential project set across 11.3 acres on Rajarhat Main Road — Kolkata&apos;s most vibrant urban corridor. Featuring modern 2 &amp; 3 BHK affordable residences with 70% open green spaces, priced from ₹65 Lakhs* onwards — Srijan Optima is crafted for those who seek elevated living with excellent connectivity to New Town IT Hub and Kolkata International Airport, backed by the trusted legacy of Srijan Realty.
+        Shriram Mudra is a premium residential project spread across approximately 5 acres in Mangadu, Chennai — one of the city&apos;s most rapidly developing residential corridors. Featuring modern 2, 2.5 &amp; 3 BHK apartments with spacious layouts, ample ventilation, and contemporary interiors, priced from ₹58 Lakhs* onwards. Strategically located near Porur and the Chennai–Bangalore Highway, Shriram Mudra offers seamless connectivity to key IT hubs, educational institutions, and commercial centers — crafted by the trusted legacy of Shriram Properties.
       </p>
     </div>
 
     <div className="flex flex-col sm:flex-row items-center justify-center sm:justify-between gap-4 py-4 px-6 border-t border-[#222] text-center sm:text-left max-w-[1200px] mx-auto">
       <p style={{ fontSize: '13px', color: '#888', fontFamily: F_SANS }}>
-        &copy; 2026 Srijan Optima. All rights reserved.
+        &copy; 2026 Shriram Mudra. All rights reserved.
       </p>
       <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-6">
-        <Link href="/optima-rajarhat/privacy-policy" style={{ fontSize: '13px', color: 'var(--color-teal)', fontFamily: F_SANS }}>
+        <Link href="/shriram-mudra-122-west/privacy-policy" style={{ fontSize: '13px', color: 'var(--color-teal)', fontFamily: F_SANS }}>
           Privacy Policy
         </Link>
       </div>

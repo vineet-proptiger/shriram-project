@@ -1,8 +1,8 @@
 const stats = [
-  { value: '47',   label: 'Acres — Township'       },
-  { value: '25+',  label: 'World-class Amenities'   },
-  { value: '2000+',label: 'Happy Families'          },
-  { value: '15+',  label: 'Years of Srijan Realty'   },
+  { value: '~5',   label: 'Acres — Land Parcel'         },
+  { value: '25+',  label: 'Lifestyle Amenities'          },
+  { value: '20K+', label: 'Happy Families'               },
+  { value: '30+',  label: 'Years of Shriram Properties'  },
 ]
 
 const F_JOST = 'var(--font-jost), Montserrat, sans-serif'

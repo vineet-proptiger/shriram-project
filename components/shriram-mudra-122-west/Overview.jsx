@@ -1,18 +1,18 @@
 'use client'
 import { useState } from 'react'
 import Image from 'next/image'
-import { PROJECT_ID, PROJECT_NAME, API_ENDPOINT, SHEET_NAME, SECRET_KEY, CITY_DISPLAY } from '../../lib/optima-rajarhat/config'
+import { PROJECT_ID, PROJECT_NAME, API_ENDPOINT, SHEET_NAME, SECRET_KEY, CITY_DISPLAY } from '../../lib/shriram-mudra-122-west/config'
 import { buildTrackingFields } from '../../lib/formMeta'
-import { overviewImage } from '../../lib/optima-rajarhat/images'
+import { overviewImage } from '../../lib/shriram-mudra-122-west/images'
 
 const GOLD      = 'var(--color-teal)'
 const GOLD_DARK = 'var(--color-teal-dark)'
 const F_SANS    = 'var(--font-sans), Open Sans, sans-serif'
 const F_JOST    = 'var(--font-jost), Montserrat, sans-serif'
 
-const PREVIEW_TEXT = `Srijan Optima Rajarhat is an upcoming premium residential development strategically located in the fast-growing locality of Rajarhat, Kolkata. Designed to complement modern urban lifestyles, this new launch offers thoughtfully planned residences with contemporary architecture, landscaped open spaces, and lifestyle-focused amenities.`
+const PREVIEW_TEXT = `Shriram 122 West offers thoughtfully designed 2 & 3 BHK apartments in the rapidly developing location of Mangadu, Chennai. Developed by Shriram Properties, this residential community blends modern design with comfortable living spaces ideal for families and professionals. The homes feature spacious layouts, ample ventilation, and contemporary interiors that ensure a balanced and convenient lifestyle.`
 
-const MORE_TEXT = ` If you are planning to buy flats in Kolkata or looking for flats for sale in Kolkata, Optima offers an excellent opportunity with seamless connectivity to New Town, Sector V IT Hub, Netaji Subhash Chandra Bose International Airport, and key commercial zones, making it a perfect blend of comfort, convenience, and long-term investment potential in one of Kolkata's most promising residential corridors.`
+const MORE_TEXT = ` Strategically located near Porur and the Chennai–Bangalore Highway, Shriram 122 West provides seamless connectivity to key IT hubs, educational institutions, healthcare facilities, and commercial centers. The project is complemented by lifestyle amenities such as a clubhouse, swimming pool, landscaped gardens, fitness zones, jogging tracks, and dedicated recreational spaces for residents, creating a vibrant and well-rounded living environment.`
 
 const inputStyle = {
   width: '100%', padding: '11px 14px',
@@ -145,9 +145,9 @@ const Overview = () => (
           fontSize: '11px', fontWeight: '700', color: 'var(--color-teal)',
           fontFamily: F_JOST, letterSpacing: '0.1em', textTransform: 'uppercase',
           border: '1px solid var(--color-teal-light)', marginBottom: '10px',
-        }}>Rajarhat, Kolkata — New Launch</span>
+        }}>Mangadu, Chennai — New Launch</span>
         <h2 style={{ fontFamily: F_JOST, fontWeight: '800', fontSize: '26px', color: '#111827', margin: 0, letterSpacing: '-0.01em' }}>
-          Srijan Optima <span style={{ color: 'var(--color-teal)' }}>Overview</span>
+          Shriram Mudra <span style={{ color: 'var(--color-teal)' }}>Overview</span>
         </h2>
         <div style={{ display: 'flex', justifyContent: 'center', marginTop: '10px' }}>
           <span style={{ display: 'block', width: '40px', height: '3px', background: 'linear-gradient(90deg, var(--color-teal), var(--color-teal-light))', borderRadius: '2px' }} />
@@ -164,7 +164,7 @@ const Overview = () => (
             border: '3px solid #fff', width: '100%',
             height: '100%', minHeight: '520px',
           }}>
-            <Image src={overviewImage} alt="Srijan Optima Rajarhat" fill className="object-cover"
+            <Image src={overviewImage} alt="Shriram Mudra Mangadu Chennai" fill className="object-cover"
               sizes="(max-width: 1024px) 100vw, 33vw" priority />
           </div>
         </div>

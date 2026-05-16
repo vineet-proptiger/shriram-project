@@ -8,41 +8,41 @@ const locationCategories = [
   {
     title: 'Education',
     items: [
-      { name: 'Delhi Public School, New Town', dist: '3.5 km' },
-      { name: 'St. Xavier’s University', dist: '5 km' },
-      { name: 'Narayana School, Rajarhat', dist: '4.5 km' },
+      { name: 'DAV School, Porur', dist: '2 km' },
+      { name: 'Sri Ramachandra University', dist: '3 km' },
+      { name: 'Hindustan International School', dist: '4 km' },
     ]
   },
   {
     title: 'Hospitals',
     items: [
-      { name: 'Tata Medical Center', dist: '6 km' },
-      { name: 'Ohio Hospital', dist: '4.5 km' },
-      { name: 'Charnock Hospital', dist: '6.5 km' },
+      { name: 'Sri Ramachandra Hospital', dist: '3.5 km' },
+      { name: 'Apollo Hospital, Vanagaram', dist: '5 km' },
+      { name: 'Billroth Hospitals', dist: '6 km' },
     ]
   },
   {
     title: 'Food & Shopping',
     items: [
-      { name: 'City Centre 2 Mall', dist: '5.5 km' },
-      { name: 'Axis Mall', dist: '7 km' },
-      { name: 'Downtown Mall', dist: '5 km' },
+      { name: 'VR Mall, Chennai', dist: '8 km' },
+      { name: 'Phoenix Market City', dist: '12 km' },
+      { name: 'Porur Lake Market', dist: '2 km' },
     ]
   },
   {
     title: 'Growth Drivers',
     items: [
-      { name: 'New Town IT Hub', dist: '5.5 km' },
-      { name: 'EcoSpace Business Park', dist: '6.5 km' },
-      { name: 'DLF IT Park', dist: '7.5 km' },
+      { name: 'DLF IT Park, Manapakkam', dist: '6 km' },
+      { name: 'Ramapuram IT Corridor', dist: '5 km' },
+      { name: 'Porur Technology Hub', dist: '3 km' },
     ]
   },
   {
     title: 'Convenient Travel',
     items: [
-      { name: 'Netaji Subhash Chandra Bose International Airport', dist: '8.5 km' },
-      { name: 'New Town Expressway', dist: '2.5 km' },
-      { name: 'Upcoming Metro Corridor', dist: '3.5 km' },
+      { name: 'Chennai–Bangalore Highway (NH-48)', dist: '1 km' },
+      { name: 'Porur Bus Terminus', dist: '2.5 km' },
+      { name: 'Upcoming Metro Station', dist: '4 km' },
     ]
   }
 ];
@@ -67,7 +67,7 @@ const Location = () => {
             fontSize: '11px', fontWeight: '700', color: 'var(--color-teal)',
             fontFamily: F_JOST, letterSpacing: '0.1em', textTransform: 'uppercase',
             border: '1px solid var(--color-teal-light)', marginBottom: '10px',
-          }}>New Town, Rajarhat — Kolkata</span>
+          }}>Mangadu, Chennai</span>
           <h2 style={{
             fontFamily: F_JOST, fontWeight: '800', fontSize: '26px',
             color: '#111827', margin: '0 0 6px', letterSpacing: '-0.01em',
@@ -163,7 +163,7 @@ const Location = () => {
                 background: 'linear-gradient(90deg, var(--color-teal), var(--color-teal-light))', zIndex: 10,
               }} />
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3682.7833924690676!2d88.4920625!3d22.624562499999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f8a1c6e37f2883%3A0x25cb92a1c0346086!2sSrijan%20Optima!5e0!3m2!1sen!2sin!4v1776942651764!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.0399!2d80.0990!3d13.0457!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52601a57d85c91%3A0x73bdb5e64d9e5b1d!2sMangadu%2C%20Chennai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1716000000000!5m2!1sen!2sin"
                 width="100%"
                 height="100%"
                 style={{ border: 0, minHeight: '420px', display: 'block' }}
@@ -185,7 +185,7 @@ const Location = () => {
                   color: '#fff', fontSize: '11px', fontFamily: F_JOST,
                   fontWeight: '700', letterSpacing: '0.04em'
                 }}>
-                  New Town, Rajarhat, Kolkata
+                  Mangadu, Chennai
                 </span>
               </div>
             </div>

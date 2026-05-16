@@ -7,29 +7,29 @@ const PRIMARY = "var(--color-primary)";
 const units = [
   {
     type: "2 BHK",
-    size: "921 Sq.ft.",
-    price: "₹65 Lakhs*",
+    size: "818 Sq.ft.",
+    price: "₹58 Lakhs*",
     oldPrice: null,
     btnText: "Get Cost Sheet",
-    features: ["Modern Layout", "Premium Finish", "High-Rise Living"],
+    features: ["Spacious Layout", "Premium Finish", "High-Rise Living"],
     isPopular: false,
   },
   {
-    type: "3 BHK",
-    size: "1200 Sq.ft.",
+    type: "2.5 BHK",
+    size: "1157 Sq.ft.",
     price: "₹ Ask For Price",
     oldPrice: null,
     btnText: "Ask For Price",
-    features: ["Spacious Design", "Luxury Amenities", "Excellent View"],
+    features: ["Smart Design", "Luxury Amenities", "Excellent Ventilation"],
     isPopular: true,
   },
   {
-    type: "3 BHK + Study",
-    size: "1649 Sq.ft.",
+    type: "3 BHK",
+    size: "1285 Sq.ft.",
     price: "Ask For Price",
     oldPrice: null,
     btnText: "Ask For Price",
-    features: ["Extra Workspace", "Large Balconies", "Elite Lifestyle"],
+    features: ["Spacious Interiors", "Large Balconies", "Elite Lifestyle"],
     isPopular: false,
   },
 ];
@@ -50,7 +50,7 @@ const Pricing = ({ setIsOpen }) => (
           letterSpacing: "0.1em", textTransform: "uppercase",
           border: "1px solid var(--color-teal-light)", marginBottom: "10px",
         }}>
-          RAJARHAT, KOLKATA — PREMIUM RESIDENCES
+          MANGADU, CHENNAI — PREMIUM RESIDENCES
         </span>
         <h2 className="font-bold mb-4"
           style={{ fontFamily: "var(--font-jost), Montserrat, sans-serif", color: PRIMARY, fontSize: "26px", letterSpacing: "-0.01em" }}>
@@ -75,17 +75,19 @@ const Pricing = ({ setIsOpen }) => (
               <div className="absolute inset-0 opacity-5 group-hover:opacity-10 transition-opacity"
                 style={{ background: `linear-gradient(135deg, ${PRIMARY} 0%, transparent 100%)` }} />
               <h3 className="text-xl font-bold mb-1 relative z-10" style={{ fontFamily: F_SANS, color: PRIMARY, letterSpacing: "0.02em" }}>
-                {unit.type}
+                APARTMENTS
               </h3>
-              <div className="flex items-center gap-2 relative z-10">
-                <span className="text-gray-400 text-[11px] uppercase tracking-wider" style={{ fontFamily: F_SANS }}>Size:</span>
+              <div className="flex items-center gap-2 relative z-10 mt-2">
+                <span className="text-gray-400 text-[11px] uppercase tracking-wider" style={{ fontFamily: F_SANS }}>Type</span>
+                <p className="text-sm font-semibold" style={{ fontFamily: F_SANS, color: PRIMARY }}>{unit.type}</p>
+                <span className="text-gray-400 text-[11px] uppercase tracking-wider ml-3" style={{ fontFamily: F_SANS }}>Size</span>
                 <p className="text-sm font-semibold" style={{ fontFamily: F_SANS, color: PRIMARY }}>{unit.size}</p>
               </div>
             </div>
 
             <div className="p-7 pt-6">
               <div className="mb-6">
-                <span className="text-[10px] text-gray-400 uppercase tracking-[0.15em] font-medium block mb-1" style={{ fontFamily: F_SANS }}>Starting At</span>
+                <span className="text-[10px] text-gray-400 uppercase tracking-[0.15em] font-medium block mb-1" style={{ fontFamily: F_SANS }}>Price Start From</span>
                 <div className="flex items-center gap-2 sm:gap-3 flex-nowrap whitespace-nowrap">
                   {unit.oldPrice && (
                     <span className="text-sm sm:text-lg line-through font-medium opacity-60" style={{ fontFamily: F_SANS, color: GOLD }}>{unit.oldPrice}</span>

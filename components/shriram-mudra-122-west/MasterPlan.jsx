@@ -1,16 +1,16 @@
 'use client'
 import React, { useState } from 'react'
 import Image from 'next/image'
-import { masterplanImages } from '../../lib/optima-rajarhat/images'
+import { masterplanImages } from '../../lib/shriram-mudra-122-west/images'
 
 const F_JOST = 'var(--font-jost), Montserrat, sans-serif'
 const F_SANS = 'var(--font-sans), Open Sans, sans-serif'
 
 const plans = [
-  { label: 'Site Master Plan',              img: masterplanImages.masterPlan },
-  { label: '2 BHK — 921 Sq.ft.',            img: masterplanImages.bhk2 },
-  { label: '3 BHK — 1200 Sq.ft.',           img: masterplanImages.bhk3 },
-  { label: '3 BHK + Study — 1649 Sq.ft.',   img: masterplanImages.bhk45 },
+  { label: 'Site Master Plan',     img: masterplanImages.masterPlan },
+  { label: '2 BHK — 818 Sq.ft.',  img: masterplanImages.bhk2       },
+  { label: '2.5 BHK — 1157 Sq.ft.', img: masterplanImages.bhk25    },
+  { label: '3 BHK — 1285 Sq.ft.', img: masterplanImages.bhk3       },
 ]
 
 const MasterPlan = ({ setIsOpen }) => {
@@ -31,7 +31,7 @@ const MasterPlan = ({ setIsOpen }) => {
             fontSize: '11px', fontWeight: '700', color: 'var(--color-teal)',
             fontFamily: F_JOST, letterSpacing: '0.1em', textTransform: 'uppercase',
             border: '1px solid var(--color-teal-light)', marginBottom: '10px',
-          }}>Rajarhat, Kolkata — Layout & Configuration</span>
+          }}>Mangadu, Chennai — Layout & Configuration</span>
           <h2 style={{
             fontFamily: F_JOST, fontWeight: '800', fontSize: '26px',
             color: '#111827', margin: '0 0 6px', letterSpacing: '-0.01em',

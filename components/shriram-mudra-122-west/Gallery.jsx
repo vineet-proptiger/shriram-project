@@ -1,7 +1,7 @@
 'use client'
 import React, { useState } from 'react'
 import Image from 'next/image'
-import { galleryImages } from '../../lib/optima-rajarhat/images'
+import { galleryImages } from '../../lib/shriram-mudra-122-west/images'
 
 const F_JOST = 'var(--font-jost), Montserrat, sans-serif'
 const F_SANS = 'var(--font-sans), Open Sans, sans-serif'

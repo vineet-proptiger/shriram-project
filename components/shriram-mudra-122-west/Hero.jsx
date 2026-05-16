@@ -1,7 +1,7 @@
 'use client'
 import { useState, useEffect, useRef } from 'react'
 import Image from 'next/image'
-import { heroImages } from '../../lib/optima-rajarhat/images'
+import { heroImages } from '../../lib/shriram-mudra-122-west/images'
 
 const F_JOST = 'var(--font-jost), Montserrat, sans-serif'
 const F_SANS  = 'var(--font-sans), "Open Sans", sans-serif'
@@ -22,10 +22,10 @@ export default function Hero({ setIsOpen }) {
   const goTo = (idx) => setCur(idx)
 
   const specs = [
-    { val: '11.3',     lbl: 'Acres\nTownship'   },
-    { val: '2 & 3 BHK', lbl: 'Config-\nuration' },
-    { val: '70%',      lbl: 'Open Green\nSpaces' },
-    { val: '₹65L+',   lbl: 'Starting\nPrice'    },
+    { val: '5',      lbl: 'Acres\nLand Parcel'  },
+    { val: '3 BHK',  lbl: 'Config-\nuration'    },
+    { val: 'Porur',  lbl: 'Near IT\nHub'         },
+    { val: '₹58L+', lbl: 'Starting\nPrice'       },
   ]
 
   return (
@@ -49,7 +49,7 @@ export default function Hero({ setIsOpen }) {
           }}>
             {slides.map((src, idx) => (
               <div key={idx} style={{ flex: '0 0 100%', height: '100%', position: 'relative' }}>
-                <Image src={src} alt={`Srijan Optima ${idx + 1}`} fill className="object-cover" priority={idx === 0} sizes="100vw" />
+                <Image src={src} alt={`Shriram Mudra ${idx + 1}`} fill className="object-cover" priority={idx === 0} sizes="100vw" />
               </div>
             ))}
           </div>
@@ -72,10 +72,10 @@ export default function Hero({ setIsOpen }) {
           {/* Project title bottom-left */}
           <div style={{ position: 'absolute', bottom: '14px', left: '16px', zIndex: 5 }}>
             <p style={{ fontFamily: F_SANS, fontSize: '10px', fontWeight: 600, letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--color-teal)', margin: '0 0 4px' }}>
-              Rajarhat Main Road, Kolkata
+              Mangadu, Chennai
             </p>
             <h1 style={{ fontFamily: F_JOST, fontSize: 'clamp(24px, 7vw, 36px)', fontWeight: 800, color: '#fff', lineHeight: 1.05, letterSpacing: '-0.02em', margin: 0 }}>
-              Srijan <span style={{ color: 'var(--color-teal)' }}>Optima</span>
+              Shriram <span style={{ color: 'var(--color-teal)' }}>Mudra</span>
             </h1>
           </div>
 
@@ -113,9 +113,9 @@ export default function Hero({ setIsOpen }) {
             Location Advantages
           </p>
           {[
-            'Close to New Town IT Hub',
-            'Excellent Airport Connectivity',
-            'Upcoming Infrastructure Boost',
+            'Near Porur IT Hub & IT Corridors',
+            'Chennai–Bangalore Highway Access',
+            'Modern Clubhouse & Lifestyle Amenities',
           ].map((item, i) => (
             <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '6px' }}>
               <span style={{ width: '5px', height: '5px', borderRadius: '50%', background: 'var(--color-teal)', flexShrink: 0 }} />
@@ -127,10 +127,10 @@ export default function Hero({ setIsOpen }) {
         {/* Mobile — CTA */}
         <div style={{ background: '#0d1a24', padding: '14px 16px', display: 'flex', flexDirection: 'column', gap: '8px' }}>
           <p style={{ fontFamily: F_JOST, fontSize: '13px', fontWeight: 600, color: 'rgba(255,255,255,0.55)', textAlign: 'center', margin: 0 }}>
-            2 &amp; 3 BHK Affordable Residences
+            2, 2.5 &amp; 3 BHK Premium Residences
           </p>
           <p className="blink-price" style={{ fontFamily: F_JOST, fontSize: '26px', fontWeight: 700, color: 'var(--color-teal)', textAlign: 'center', lineHeight: 1, margin: 0 }}>
-            ₹65 Lacs*
+            ₹58 Lacs*
           </p>
           <button
             onClick={() => setIsOpen(true)}
@@ -143,7 +143,7 @@ export default function Hero({ setIsOpen }) {
               boxShadow: '0 4px 18px rgba(74,140,152,0.4)',
             }}
           >
-            Book Site Visit
+            Book Your Home
           </button>
         </div>
       </div>
@@ -175,7 +175,7 @@ export default function Hero({ setIsOpen }) {
                   transform: cur === idx ? 'scale(1.06)' : 'scale(1)',
                   transition: 'transform 8s ease-out',
                 }}>
-                  <Image src={src} alt={`Srijan Optima ${idx + 1}`} fill className="object-cover" priority={idx === 0} sizes="100vw" />
+                  <Image src={src} alt={`Shriram Mudra ${idx + 1}`} fill className="object-cover" priority={idx === 0} sizes="100vw" />
                 </div>
               </div>
             ))}
@@ -200,7 +200,7 @@ export default function Hero({ setIsOpen }) {
                 padding: '5px 14px', borderRadius: '2px',
                 background: 'rgba(13,26,36,0.5)', backdropFilter: 'blur(8px)',
               }}>
-                Booking Window Opens
+                Booking Open
               </span>
             </div>
           </nav>
@@ -214,7 +214,7 @@ export default function Hero({ setIsOpen }) {
             <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '8px' }}>
               <span style={{ display: 'block', width: '28px', height: '1px', background: 'var(--color-teal)', opacity: 0.8 }} />
               <span style={{ fontFamily: F_SANS, fontSize: '10px', fontWeight: 600, letterSpacing: '0.22em', textTransform: 'uppercase', color: 'var(--color-teal)' }}>
-                Largest Township in Rajarhat Main Road
+                Premium Residential Township in Mangadu, Chennai
               </span>
             </div>
             <h1 style={{
@@ -222,7 +222,7 @@ export default function Hero({ setIsOpen }) {
               fontSize: 'clamp(28px, 3.4vw, 52px)',
               fontWeight: 800, color: '#fff', lineHeight: 1.05, letterSpacing: '-0.02em',
             }}>
-              Srijan <span style={{ color: 'var(--color-teal)' }}>Optima</span>
+              Shriram <span style={{ color: 'var(--color-teal)' }}>Mudra</span>
             </h1>
           </div>
 
@@ -257,10 +257,10 @@ export default function Hero({ setIsOpen }) {
           }}>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
               {[
-                'Elevated Living in Rajarhat',
-                'Modern 2 & 3 BHK Residences',
-                '70% Open Green Spaces',
-                'Spread across 11.3 Acres',
+                'Shriram 122 West, Mangadu, Chennai',
+                'Modern 2, 2.5 & 3 BHK Residences',
+                'Premium High-Rise Residential Towers',
+                'Modern Clubhouse & Lifestyle Amenities',
               ].map((line, i) => (
                 <p key={i} style={{ fontFamily: F_SANS, fontSize: '12px', lineHeight: 1.6, color: 'rgba(255,255,255,0.65)', fontWeight: 400, margin: 0, textAlign: 'center' }}>
                   {line}
@@ -318,9 +318,9 @@ export default function Hero({ setIsOpen }) {
               Location Advantages
             </p>
             {[
-              'Close to New Town IT Hub',
-              'Excellent Airport Connectivity',
-              'Upcoming Infrastructure Boost',
+              'Near Porur IT Hub & IT Corridors',
+              'Chennai–Bangalore Highway Access',
+              'Well Connected to Poonamallee & Porur',
             ].map((item, i) => (
               <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                 <span style={{ width: '4px', height: '4px', borderRadius: '50%', background: 'var(--color-teal)', flexShrink: 0, opacity: 0.8 }} />
@@ -337,10 +337,10 @@ export default function Hero({ setIsOpen }) {
           }}>
             <div style={{ textAlign: 'center' }}>
               <p style={{ fontFamily: F_SANS, fontSize: '12px', fontWeight: 600, color: 'rgba(255,255,255,0.4)', letterSpacing: '0.06em', marginBottom: '4px' }}>
-                2 &amp; 3 BHK Affordable Flats From
+                2, 2.5 &amp; 3 BHK Residences From
               </p>
               <p className="blink-price" style={{ fontFamily: F_JOST, fontSize: '30px', fontWeight: 700, color: 'var(--color-teal)', lineHeight: 1, margin: 0 }}>
-                ₹65 Lacs*
+                ₹58 Lacs*
               </p>
             </div>
 
@@ -358,7 +358,7 @@ export default function Hero({ setIsOpen }) {
               onMouseEnter={e => { e.currentTarget.style.opacity = '0.88'; e.currentTarget.style.transform = 'translateY(-1px)' }}
               onMouseLeave={e => { e.currentTarget.style.opacity = '1'; e.currentTarget.style.transform = 'translateY(0)' }}
             >
-              Save This Deal
+              Book Your Home
             </button>
           </div>
 

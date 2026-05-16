@@ -1,6 +1,6 @@
 'use client'
 import React, { useState } from 'react'
-import { PROJECT_ID, PROJECT_NAME, API_ENDPOINT, SHEET_NAME, SECRET_KEY, CITY_DISPLAY } from '../../lib/optima-rajarhat/config'
+import { PROJECT_ID, PROJECT_NAME, API_ENDPOINT, SHEET_NAME, SECRET_KEY, CITY_DISPLAY } from '../../lib/shriram-mudra-122-west/config'
 import { buildTrackingFields } from '../../lib/formMeta'
 
 const TEAL = 'var(--color-teal)'

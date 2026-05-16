@@ -3,7 +3,7 @@ import React, { useEffect, useRef } from 'react'
 // import Image from 'next/image'
 import { X } from 'lucide-react'
 import LeadForm from './LeadForm'
-// import { popupImage } from '../../lib/optima-rajarhat/images'
+// import { popupImage } from '../../lib/shriram-mudra-122-west/images'
 
 const F_SANS = 'var(--font-sans), Open Sans, sans-serif'
 const F_JOST = 'var(--font-jost), Montserrat, sans-serif'
@@ -50,11 +50,11 @@ const EnquireModal = ({ isOpen, setIsOpen }) => {
       >
         {/* LEFT - Image */}
         {/* <div className="hidden sm:block sm:w-[44%] shrink-0 relative" style={{ background: '#0d1117', minHeight: '100%' }}>
-          <Image src={popupImage} alt="Srijan Optima Rajarhat" fill className="object-cover" sizes="(max-width: 768px) 0vw, 45vw" />
+          <Image src={popupImage} alt="Shriram Mudra Mangadu Chennai" fill className="object-cover" sizes="(max-width: 768px) 0vw, 45vw" />
           <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, rgba(26,26,46,0.85) 0%, rgba(26,26,46,0.1) 60%)' }} />
           <div className="absolute bottom-0 left-0 right-0 p-5 text-white z-10">
-            <p className="text-[10px] font-semibold tracking-[3px] uppercase opacity-80 mb-1" style={{ fontFamily: F_SANS, color: 'var(--color-teal)' }}>Srijan Optima — Rajarhat</p>
-            <p style={{ fontFamily: F_JOST, fontSize: '13px', fontWeight: 500, opacity: 0.85 }}>2, 3 &amp; 4 BHK · Starting ₹65 Lacs*</p>
+            <p className="text-[10px] font-semibold tracking-[3px] uppercase opacity-80 mb-1" style={{ fontFamily: F_SANS, color: 'var(--color-teal)' }}>Shriram Mudra — Mangadu, Chennai</p>
+            <p style={{ fontFamily: F_JOST, fontSize: '13px', fontWeight: 500, opacity: 0.85 }}>2, 2.5 &amp; 3 BHK · Starting ₹58 Lacs*</p>
           </div>
         </div> */}
 
@@ -69,11 +69,11 @@ const EnquireModal = ({ isOpen, setIsOpen }) => {
 
           {/* Mobile strip */}
           {/* <div className="sm:hidden w-full h-56 relative shrink-0">
-            <Image src={popupImage} alt="Srijan Optima Rajarhat" fill className="object-cover" style={{ objectPosition: 'top' }} sizes="100vw" />
+            <Image src={popupImage} alt="Shriram Mudra Mangadu Chennai" fill className="object-cover" style={{ objectPosition: 'top' }} sizes="100vw" />
             <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, rgba(26,26,46,0.6) 0%, transparent 60%)' }} />
             <div className="absolute bottom-3 left-4 text-white z-10">
-              <p className="text-[9px] uppercase tracking-[2px] opacity-80" style={{ fontFamily: F_SANS }}>Srijan Optima — Rajarhat</p>
-              <p className="text-[11px] font-medium opacity-85" style={{ fontFamily: F_JOST }}>2, 3 &amp; 4 BHK · Starting ₹65 Lacs*</p>
+              <p className="text-[9px] uppercase tracking-[2px] opacity-80" style={{ fontFamily: F_SANS }}>Shriram Mudra — Mangadu, Chennai</p>
+              <p className="text-[11px] font-medium opacity-85" style={{ fontFamily: F_JOST }}>2, 2.5 &amp; 3 BHK · Starting ₹58 Lacs*</p>
             </div>
           </div> */}
 

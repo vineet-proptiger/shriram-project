@@ -1,7 +1,7 @@
 'use client'
 import React, { useState, useEffect } from 'react'
 import { Menu, X } from 'lucide-react'
-import { logoImages } from '../../lib/optima-rajarhat/images'
+import { logoImages } from '../../lib/shriram-mudra-122-west/images'
 
 const navLinks = [
   { name: 'Overview',   href: '#overview'   },
@@ -17,7 +17,7 @@ const navLinks = [
 const ProjectLogo = () => (
   <img
     src={logoImages.tarc}
-    alt="Srijan Optima"
+    alt="Shriram Mudra"
     className="h-10 md:h-16 w-auto object-contain transition-all"
     style={{ maxWidth: '250px' }}
   />

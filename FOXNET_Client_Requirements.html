@@ -1,11 +1,10 @@
-x
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FOXNET Admin Panel — Client Requirements</title>
+  <title>FOXNET Admin Panel — Client Requirements v1.1</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
@@ -390,6 +389,177 @@ x
       margin-top: 10px;
     }
 
+    /* TABLE OF CONTENTS */
+    .toc-box {
+      border: 1px solid #E2E7F2;
+      border-radius: 10px;
+      padding: 16px 20px;
+      margin-bottom: 36px;
+      background: #FAFBFF;
+    }
+
+    .toc-title {
+      font-size: 10px;
+      font-weight: 800;
+      color: #7A8BAD;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 12px;
+    }
+
+    .toc-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4px 24px;
+    }
+
+    .toc-col {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .toc-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      color: #3A4663;
+    }
+
+    .toc-tag {
+      font-size: 9px;
+      font-weight: 800;
+      width: 20px;
+      height: 20px;
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .tag-green-s {
+      background: #ECFDF5;
+      color: #059669;
+      border: 1px solid #6EE7B7;
+    }
+
+    .tag-blue-s {
+      background: #EEF2FF;
+      color: #4F46E5;
+      border: 1px solid #C7D2FE;
+    }
+
+    .tag-red-s {
+      background: #FEF2F2;
+      color: #DC2626;
+      border: 1px solid #FECACA;
+    }
+
+    /* GAP BLOCKS */
+    .gap-block {
+      border: 1px solid #E2E7F2;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 12px;
+    }
+
+    .gap-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: #F7F9FC;
+      padding: 10px 14px;
+      border-bottom: 1px solid #E2E7F2;
+    }
+
+    .gap-num {
+      width: 24px;
+      height: 24px;
+      background: #0C1524;
+      color: #fff;
+      font-size: 10px;
+      font-weight: 800;
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .gap-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: #0C1524;
+      flex: 1;
+    }
+
+    .gap-tag {
+      font-size: 9px;
+      font-weight: 800;
+      padding: 3px 8px;
+      border-radius: 20px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .tag-red {
+      background: #FEF2F2;
+      color: #DC2626;
+      border: 1px solid #FECACA;
+    }
+
+    .tag-orange {
+      background: #FFF7ED;
+      color: #EA580C;
+      border: 1px solid #FED7AA;
+    }
+
+    .tag-gray {
+      background: #F1F5F9;
+      color: #64748B;
+      border: 1px solid #E2E8F0;
+    }
+
+    .gap-body {
+      padding: 12px 14px;
+      background: #fff;
+    }
+
+    .gap-issue {
+      font-size: 12px;
+      color: #3A4663;
+      margin-bottom: 8px;
+      line-height: 1.6;
+      padding-bottom: 8px;
+      border-bottom: 1px dashed #E2E7F2;
+    }
+
+    .gap-q {
+      font-size: 12px;
+      color: #0C1524;
+      margin-bottom: 8px;
+      line-height: 1.6;
+    }
+
+    .gap-ans {
+      font-size: 11.5px;
+      color: #7A8BAD;
+      margin-top: 5px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .ans-line {
+      flex: 1;
+      border-bottom: 1px solid #CAD1E4;
+      height: 16px;
+      display: inline-block;
+      min-width: 180px;
+    }
+
     @media print {
       body {
         background: #fff;
@@ -397,6 +567,14 @@ x
 
       .page {
         padding: 30px 40px;
+      }
+
+      .gap-block {
+        break-inside: avoid;
+      }
+
+      .section {
+        break-inside: avoid;
       }
     }
   </style>
@@ -429,9 +607,35 @@ x
     <!-- INTRO -->
     <div class="intro-box">
       <p>This document lists <strong>everything we need from you</strong> before development begins on the FOXNET Admin
-        Panel. Please go through each section carefully, collect the required information, and send it back to us.
+        Panel.
+        Please go through each section carefully, collect the required information, and send it back to us.
         <strong>Development will not start until all required items are received.</strong> Missing items cause delays
-        and additional cost.</p>
+        and additional cost.
+      </p>
+    </div>
+
+    <!-- TABLE OF CONTENTS -->
+    <div class="toc-box">
+      <div class="toc-title">Document Structure</div>
+      <div class="toc-grid">
+        <div class="toc-col">
+          <div class="toc-item"><span class="toc-tag tag-green-s">T</span> Technology Stack</div>
+          <div class="toc-item"><span class="toc-tag tag-blue-s">1</span> AI Service API Keys</div>
+          <div class="toc-item"><span class="toc-tag tag-blue-s">2</span> Database Credentials</div>
+          <div class="toc-item"><span class="toc-tag tag-blue-s">3</span> Google Authentication</div>
+          <div class="toc-item"><span class="toc-tag tag-blue-s">4</span> Automation Engine — n8n</div>
+          <div class="toc-item"><span class="toc-tag tag-blue-s">5</span> Community Platforms</div>
+        </div>
+        <div class="toc-col">
+          <div class="toc-item"><span class="toc-tag tag-blue-s">6</span> All 20 Persona Data</div>
+          <div class="toc-item"><span class="toc-tag tag-blue-s">7</span> Hosting &amp; Domain</div>
+          <div class="toc-item"><span class="toc-tag tag-blue-s">8</span> Infrastructure Services</div>
+          <div class="toc-item"><span class="toc-tag tag-blue-s">9</span> Design &amp; Brand Assets</div>
+          <div class="toc-item"><span class="toc-tag tag-blue-s">10</span> Scope Confirmation</div>
+          <div class="toc-item"><span class="toc-tag tag-blue-s">✓</span> Master Delivery Checklist</div>
+          <div class="toc-item"><span class="toc-tag tag-red-s">!</span> Clarifications Required (15 points)</div>
+        </div>
+      </div>
     </div>
 
     <!-- TECH STACK -->
@@ -1183,11 +1387,303 @@ x
       </div>
     </div>
 
+    <hr class="divider">
+
+    <!-- SECTION 11 — CLARIFICATIONS -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-num" style="background:#DC2626">!</div>
+        <div class="section-title">Clarifications Required — Must Be Answered Before Development Starts</div>
+      </div>
+      <p style="font-size:12.5px;color:#3A4663;margin-bottom:16px">
+        After reviewing your project document in detail, we identified <strong>15 points that are either unclear,
+          missing, or contradictory.</strong>
+        These are not optional — each one directly affects how we build the system. Wrong assumptions here mean rework
+        later,
+        which costs time and money. Please go through each point and provide a clear answer.
+      </p>
+
+      <!-- GAP 1 -->
+      <div class="gap-block">
+        <div class="gap-header">
+          <div class="gap-num">01</div>
+          <div class="gap-title">Dashboard — Monthly Revenue Card</div>
+          <div class="gap-tag tag-red">Blocker</div>
+        </div>
+        <div class="gap-body">
+          <div class="gap-issue"><strong>Issue:</strong> Your dashboard shows a "Monthly Revenue" stat card. But
+            Gumroad, Shopify, KDP, Etsy, and other revenue integrations are listed under <em>Future Scope</em> — not
+            part of this build.</div>
+          <div class="gap-q"><strong>Question:</strong> Should this card show a placeholder / manual entry for now, or
+            should it be removed from the current build entirely?</div>
+          <div class="gap-ans">Your answer: <span class="ans-line"></span></div>
+        </div>
+      </div>
+
+      <!-- GAP 2 -->
+      <div class="gap-block">
+        <div class="gap-header">
+          <div class="gap-num">02</div>
+          <div class="gap-title">Persona Cards — Followers Count & Posts Count</div>
+          <div class="gap-tag tag-red">Blocker</div>
+        </div>
+        <div class="gap-body">
+          <div class="gap-issue"><strong>Issue:</strong> Each persona card shows follower count and post count. This
+            data comes from Instagram, YouTube, TikTok, or other platform APIs — none of which are mentioned as
+            integrations in your document.</div>
+          <div class="gap-q"><strong>Question:</strong> Will this data be entered manually per persona, or are platform
+            APIs already connected? If connected, which platforms?</div>
+          <div class="gap-ans">Your answer: <span class="ans-line"></span></div>
+        </div>
+      </div>
+
+      <!-- GAP 3 -->
+      <div class="gap-block">
+        <div class="gap-header">
+          <div class="gap-num">03</div>
+          <div class="gap-title">Pipeline Tracker — 8 Stages Not Defined</div>
+          <div class="gap-tag tag-red">Blocker</div>
+        </div>
+        <div class="gap-body">
+          <div class="gap-issue"><strong>Issue:</strong> Persona Detail shows a "live 8-stage pipeline tracker." The
+            document does not name or define what these 8 stages are. This tracker cannot be built without knowing the
+            exact stages.</div>
+          <div class="gap-q"><strong>Question:</strong> Please list all 8 stages by name in order (e.g. Script
+            Generation → Voice Rendering → Video Rendering → Upload → Schedule → Publish → etc.).</div>
+          <div class="gap-ans">Stage 1: <span class="ans-line"></span></div>
+          <div class="gap-ans">Stage 2: <span class="ans-line"></span></div>
+          <div class="gap-ans">Stage 3: <span class="ans-line"></span></div>
+          <div class="gap-ans">Stage 4: <span class="ans-line"></span></div>
+          <div class="gap-ans">Stage 5: <span class="ans-line"></span></div>
+          <div class="gap-ans">Stage 6: <span class="ans-line"></span></div>
+          <div class="gap-ans">Stage 7: <span class="ans-line"></span></div>
+          <div class="gap-ans">Stage 8: <span class="ans-line"></span></div>
+        </div>
+      </div>
+
+      <!-- GAP 4 -->
+      <div class="gap-block">
+        <div class="gap-header">
+          <div class="gap-num">04</div>
+          <div class="gap-title">API Credit Burn Bars — Data Source</div>
+          <div class="gap-tag tag-orange">Important</div>
+        </div>
+        <div class="gap-body">
+          <div class="gap-issue"><strong>Issue:</strong> The dashboard shows credit burn bars for Claude, ElevenLabs,
+            Enhancor, Gemini, and GPT. Not all of these services provide a real-time usage API. Claude and GPT have
+            limited billing APIs. Enhancor's usage API is unclear.</div>
+          <div class="gap-q"><strong>Question:</strong> Should these bars read from a real-time API per service, or does
+            your n8n automation log usage to the shared database which the panel then reads?</div>
+          <div class="gap-ans">Your answer: <span class="ans-line"></span></div>
+        </div>
+      </div>
+
+      <!-- GAP 5 -->
+      <div class="gap-block">
+        <div class="gap-header">
+          <div class="gap-num">05</div>
+          <div class="gap-title">SaaS Drop — Email, YouTube Community, Instagram Stories</div>
+          <div class="gap-tag tag-red">Blocker</div>
+        </div>
+        <div class="gap-body">
+          <div class="gap-issue"><strong>Issue:</strong> The Blast Targets panel in SaaS Drop includes Email, YouTube
+            Community, and Instagram Stories. None of these are mentioned anywhere else in the document. Each requires a
+            separate API integration (email provider, YouTube API, Meta/Instagram API) and separate credentials.</div>
+          <div class="gap-q"><strong>Question:</strong> Are these 3 channels functional in this build, or are they UI
+            placeholders showing "Pending" status only? If functional — which email provider, and do you have YouTube +
+            Instagram API access already?</div>
+          <div class="gap-ans">Your answer: <span class="ans-line"></span></div>
+        </div>
+      </div>
+
+      <!-- GAP 6 -->
+      <div class="gap-block">
+        <div class="gap-header">
+          <div class="gap-num">06</div>
+          <div class="gap-title">SaaS Drop — How Is a New Drop Created?</div>
+          <div class="gap-tag tag-red">Blocker</div>
+        </div>
+        <div class="gap-body">
+          <div class="gap-issue"><strong>Issue:</strong> The document shows an "active drop" banner with campaign name,
+            scope, and countdown. It also shows previous drops history. But there is no "Create New Drop" feature
+            described. Someone must set this up somewhere.</div>
+          <div class="gap-q"><strong>Question:</strong> Does the admin create a new drop from within the panel (we need
+            to build a form for this), or is the drop created on the n8n side and the panel just reads and displays it?
+          </div>
+          <div class="gap-ans">Your answer: <span class="ans-line"></span></div>
+        </div>
+      </div>
+
+      <!-- GAP 7 -->
+      <div class="gap-block">
+        <div class="gap-header">
+          <div class="gap-num">07</div>
+          <div class="gap-title">VPS Health & CPU Usage in Settings</div>
+          <div class="gap-tag tag-orange">Important</div>
+        </div>
+        <div class="gap-body">
+          <div class="gap-issue"><strong>Issue:</strong> The Settings page shows VPS health and CPU usage. The admin
+            panel is a web application hosted on Vercel. It cannot directly connect to a VPS and pull metrics without a
+            monitoring agent or API endpoint installed on that VPS.</div>
+          <div class="gap-q"><strong>Question:</strong> Is there a monitoring tool already installed on your VPS (e.g.
+            Netdata, Prometheus, Grafana, or a custom endpoint)? If not, should we install one, or should this section
+            show a static placeholder?</div>
+          <div class="gap-ans">Your answer: <span class="ans-line"></span></div>
+        </div>
+      </div>
+
+      <!-- GAP 8 -->
+      <div class="gap-block">
+        <div class="gap-header">
+          <div class="gap-num">08</div>
+          <div class="gap-title">Telegram Alerts — Admin Chat ID Missing</div>
+          <div class="gap-tag tag-orange">Important</div>
+        </div>
+        <div class="gap-body">
+          <div class="gap-issue"><strong>Issue:</strong> Settings includes Telegram alert preferences (pipeline
+            failures, daily summary, etc.). A Telegram bot can only send messages to a specific Chat ID. Your document
+            mentions the Bot Token but not the admin's personal Telegram Chat ID.</div>
+          <div class="gap-q"><strong>Question:</strong> Please provide your personal Telegram Chat ID (you can get it by
+            messaging @userinfobot on Telegram).</div>
+          <div class="gap-ans">Admin Telegram Chat ID: <span class="ans-line"></span></div>
+        </div>
+      </div>
+
+      <!-- GAP 9 -->
+      <div class="gap-block">
+        <div class="gap-header">
+          <div class="gap-num">09</div>
+          <div class="gap-title">Inject Manual Script — Queue vs Persona Detail</div>
+          <div class="gap-tag tag-orange">Important</div>
+        </div>
+        <div class="gap-body">
+          <div class="gap-issue"><strong>Issue:</strong> "Inject Manual Script" appears in two places — in the Approval
+            Queue (per content piece) and in Persona Detail Level 2 (per persona's next run). It is unclear whether
+            these are the same action or two separate features with different scope.</div>
+          <div class="gap-q"><strong>Question:</strong> Is the Queue injection for that one specific pending content
+            piece only? And is the Persona Detail injection for the next pipeline run only? Or are they the same action
+            synced together?</div>
+          <div class="gap-ans">Your answer: <span class="ans-line"></span></div>
+        </div>
+      </div>
+
+      <!-- GAP 10 -->
+      <div class="gap-block">
+        <div class="gap-header">
+          <div class="gap-num">10</div>
+          <div class="gap-title">30-Day Archive — Restore Feature</div>
+          <div class="gap-tag tag-orange">Important</div>
+        </div>
+        <div class="gap-body">
+          <div class="gap-issue"><strong>Issue:</strong> Deleting a persona moves it to a 30-day archive. But there is
+            no "Archived Personas" page or restore feature described in the document. If data is archived but cannot be
+            accessed or restored, the archive is meaningless.</div>
+          <div class="gap-q"><strong>Question:</strong> Do you need a visible archive section where deleted personas can
+            be restored or permanently deleted? Or should archived data be silently retained in the database only (no
+            UI)?</div>
+          <div class="gap-ans">Your answer: <span class="ans-line"></span></div>
+        </div>
+      </div>
+
+      <!-- GAP 11 -->
+      <div class="gap-block">
+        <div class="gap-header">
+          <div class="gap-num">11</div>
+          <div class="gap-title">Speech Duration Timer — Words Per Minute</div>
+          <div class="gap-tag tag-gray">Minor</div>
+        </div>
+        <div class="gap-body">
+          <div class="gap-issue"><strong>Issue:</strong> Manual Script Injection includes a speech duration timer. This
+            requires a words-per-minute (WPM) value to calculate duration. Your personas post in multiple languages —
+            English, Spanish, French, Japanese, Malay — each spoken at a different average speed.</div>
+          <div class="gap-q"><strong>Question:</strong> Should we use a fixed WPM (e.g. 130 WPM, English standard) for
+            all languages, or calculate per language?</div>
+          <div class="gap-ans">Your answer: <span class="ans-line"></span></div>
+        </div>
+      </div>
+
+      <!-- GAP 12 -->
+      <div class="gap-block">
+        <div class="gap-header">
+          <div class="gap-num">12</div>
+          <div class="gap-title">"Building" Status — When Is It Set?</div>
+          <div class="gap-tag tag-gray">Minor</div>
+        </div>
+        <div class="gap-body">
+          <div class="gap-issue"><strong>Issue:</strong> Persona cards show three statuses: Active, Building, Paused.
+            "Building" is not defined. The system needs to know exactly when to set this status automatically.</div>
+          <div class="gap-q"><strong>Question:</strong> Should "Building" be set automatically when a new persona is
+            added and their first pipeline run has not yet completed successfully? Or is it set manually by the admin?
+          </div>
+          <div class="gap-ans">Your answer: <span class="ans-line"></span></div>
+        </div>
+      </div>
+
+      <!-- GAP 13 -->
+      <div class="gap-block">
+        <div class="gap-header">
+          <div class="gap-num">13</div>
+          <div class="gap-title">Supabase AND Firebase Both Listed in Settings</div>
+          <div class="gap-tag tag-red">Blocker</div>
+        </div>
+        <div class="gap-body">
+          <div class="gap-issue"><strong>Issue:</strong> The Settings page connection status lists both Supabase and
+            Firebase as services to monitor. Earlier in your document, database selection was presented as an either/or
+            choice. Using both simultaneously would mean two separate databases — which significantly changes the
+            architecture.</div>
+          <div class="gap-q"><strong>Question:</strong> Are you using both Supabase and Firebase at the same time for
+            different purposes (e.g. Supabase for data, Firebase for real-time)? Or just one? Please confirm which.
+          </div>
+          <div class="gap-ans">Your answer: <span class="ans-line"></span></div>
+        </div>
+      </div>
+
+      <!-- GAP 14 -->
+      <div class="gap-block">
+        <div class="gap-header">
+          <div class="gap-num">14</div>
+          <div class="gap-title">Trigger Post — Which Platform Does It Post To?</div>
+          <div class="gap-tag tag-orange">Important</div>
+        </div>
+        <div class="gap-body">
+          <div class="gap-issue"><strong>Issue:</strong> The "Trigger Post" button fires a persona's pipeline
+            immediately. Each persona can be configured to post on multiple platforms. The document does not clarify
+            whether Trigger Post fires on all configured platforms simultaneously or one platform at a time.</div>
+          <div class="gap-q"><strong>Question:</strong> Does Trigger Post fire on all configured platforms for that
+            persona simultaneously, or does the admin select a specific platform before triggering?</div>
+          <div class="gap-ans">Your answer: <span class="ans-line"></span></div>
+        </div>
+      </div>
+
+      <!-- GAP 15 -->
+      <div class="gap-block" style="margin-bottom:0">
+        <div class="gap-header">
+          <div class="gap-num">15</div>
+          <div class="gap-title">Timezone — Panel Display & Blast Scheduling</div>
+          <div class="gap-tag tag-orange">Important</div>
+        </div>
+        <div class="gap-body">
+          <div class="gap-issue"><strong>Issue:</strong> Scheduled post times, blast scheduling, countdown timers, and
+            pipeline logs all display time. No timezone is mentioned anywhere in the document. If admin and team members
+            are in different countries, this becomes a usability problem.</div>
+          <div class="gap-q"><strong>Question:</strong> What timezone should the panel use as default? Should it display
+            UTC, or a specific timezone (e.g. IST, EST, GMT)?</div>
+          <div class="gap-ans">Your answer: <span class="ans-line"></span></div>
+        </div>
+      </div>
+
+      <div class="warning-box" style="margin-top:18px">
+        <strong>Please answer all 15 points above before we begin development.</strong> Questions 01, 02, 03, 05, 06,
+        and 13 are marked as Blockers — these directly affect core architecture decisions. Starting without answers to
+        these will result in mandatory rework.
+      </div>
+    </div>
+
     <!-- FOOTER -->
     <div class="doc-footer">
       <div class="footer-left">
         <div style="font-weight:700;color:#0C1524;margin-bottom:3px">FOXNET Admin Panel</div>
-        <div>Client Requirements Document v1.0 — May 2026</div>
+        <div>Client Requirements Document v1.1 — May 2026</div>
       </div>
       <div class="footer-right">
         <div>Questions? Contact your development team</div>
