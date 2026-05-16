@@ -136,7 +136,7 @@ const Hero = ({ setIsOpen }) => {
                   background: "rgba(255,255,255,0.6)",
                 }}
               />
-              New Launch — Booking Open Now
+              Book Your Dream Home
               <span
                 style={{
                   display: "inline-block",
@@ -186,71 +186,40 @@ const Hero = ({ setIsOpen }) => {
                 data-aos="fade-up"
                 data-aos-delay="280"
               >
-                2, 2.5 &amp; 3 BHK Premium Residences · Mangadu, Chennai
+                Shriram 122 West, Mangadu, Chennai
               </p>
             </div>
 
-            {/* ── Project Specs ── */}
+            {/* ── Project Features ── */}
             <div
               style={{
                 background: "var(--color-teal-bg)",
                 borderRadius: "12px",
                 border: "1px solid var(--color-teal-light)",
-                padding: "12px 8px",
-                display: "grid",
-                gridTemplateColumns: "1fr 1fr",
-                gap: "0",
+                padding: "12px 16px",
               }}
               data-aos="fade-up"
               data-aos-delay="360"
             >
               {[
-                { value: "5", label: "Acres\nLand Parcel" },
-                { value: "40+", label: "State-of-Art\nAmenities" },
-                { value: "2026", label: "Possession\nYear" },
-                { value: "Mangadu", label: "Porur–\nPoonamallee" },
-              ].map((s, i) => (
-                <div
+                "Land Parcel - Approx. 5 Acres",
+                "Premium High-Rise Residential Towers",
+                "Modern Clubhouse & Lifestyle Amenities",
+              ].map((item, i) => (
+                <p
                   key={i}
                   style={{
+                    fontFamily: F_SANS,
+                    fontSize: "13px",
+                    color: "var(--color-teal-dark)",
+                    fontWeight: "600",
+                    margin: i < 2 ? "0 0 6px" : "0",
                     textAlign: "center",
-                    padding: "8px 6px",
-                    borderRight:
-                      i % 2 === 0
-                        ? "1px solid var(--color-teal-light)"
-                        : "none",
-                    borderBottom:
-                      i < 2 ? "1px solid var(--color-teal-light)" : "none",
+                    lineHeight: 1.5,
                   }}
                 >
-                  <p
-                    style={{
-                      fontFamily: F_JOST,
-                      fontSize: "22px",
-                      fontWeight: "800",
-                      color: "var(--color-dark)",
-                      margin: "0 0 2px",
-                      lineHeight: 1,
-                    }}
-                  >
-                    {s.value}
-                  </p>
-                  <p
-                    style={{
-                      fontFamily: F_SANS,
-                      fontSize: "9px",
-                      color: "var(--color-teal-dark)",
-                      margin: 0,
-                      textTransform: "uppercase",
-                      letterSpacing: "0.07em",
-                      lineHeight: 1.35,
-                      fontWeight: "700",
-                      whiteSpace: "pre-line",
-                    }}
-                  >
-                    {s.label}
-                  </p>
-                </div>
+                  {item}
+                </p>
               ))}
             </div>
 
@@ -282,9 +251,9 @@ const Hero = ({ setIsOpen }) => {
                 Exclusive Project Advantages
               </p>
               {[
-                "RERA Approved — MAS/1/2023/00297",
-                "Vastu-Compliant Premium Towers",
-                "Modern Clubhouse & Lifestyle Amenities",
+                "Well-planned 2 & 3 BHK residences",
+                "Recreation spaces, gym & swimming pool",
+                "Strategic location near Porur & IT hubs",
               ].map((item, i, arr) => (
                 <div key={i}>
                   <p
@@ -303,16 +272,11 @@ const Hero = ({ setIsOpen }) => {
                       gap: "6px",
                     }}
                   >
-                    <span
-                      style={{
-                        width: "4px",
-                        height: "4px",
-                        borderRadius: "50%",
-                        background: "rgba(255,255,255,0.7)",
-                        flexShrink: 0,
-                        display: "inline-block",
-                      }}
-                    />
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none"
+                      stroke="rgba(255,255,255,0.85)" strokeWidth="3"
+                      strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0 }}>
+                      <polyline points="20 6 9 17 4 12" />
+                    </svg>
                     {item}
                   </p>
                   {i < arr.length - 1 && (
@@ -342,24 +306,48 @@ const Hero = ({ setIsOpen }) => {
                   fontFamily: F_SANS,
                   fontSize: "13px",
                   color: "#374151",
-                  margin: "0 0 2px",
+                  margin: "0 0 6px",
                   fontWeight: "600",
                 }}
               >
-                2, 2.5 &amp; 3 BHK Premium Residences Starting From
+                Luxurious 2, 2.5 &amp; 3 BHK Starts at
               </p>
+              <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "10px" }}>
+                <span
+                  style={{
+                    fontSize: "18px",
+                    fontWeight: "600",
+                    color: "#9ca3af",
+                    fontFamily: F_JOST,
+                    lineHeight: 1,
+                    textDecoration: "line-through",
+                  }}
+                >
+                  ₹60 Lakhs*
+                </span>
+                <span
+                  className="blink-price"
+                  style={{
+                    fontSize: "22px",
+                    fontWeight: "800",
+                    color: "var(--color-teal)",
+                    fontFamily: F_JOST,
+                    lineHeight: 1,
+                  }}
+                >
+                  Onwards
+                </span>
+              </div>
               <p
-                className="blink-price"
                 style={{
-                  fontSize: "28px",
-                  fontWeight: "800",
-                  color: "var(--color-teal)",
-                  fontFamily: F_JOST,
-                  lineHeight: 1,
-                  margin: 0,
+                  fontFamily: F_SANS,
+                  fontSize: "11px",
+                  color: "#6b7280",
+                  margin: "6px 0 0",
+                  fontWeight: "500",
                 }}
               >
-                ₹58 Lacs*
+                Save Upto 2 Lakhs*
               </p>
             </div>
 
@@ -392,7 +380,7 @@ const Hero = ({ setIsOpen }) => {
               {[
                 { icon: "🎧", label: "Instant Call Back" },
                 { icon: "🚗", label: "Free Site Visit" },
-                { icon: "🏷️", label: "Best Price Assurance" },
+                { icon: "🏷️", label: "Unmatched Price" },
               ].map((b, i) => (
                 <div
                   key={i}
