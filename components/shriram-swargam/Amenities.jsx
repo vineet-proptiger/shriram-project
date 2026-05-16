@@ -1,7 +1,7 @@
 'use client'
 import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
-import { amenityImages } from '../../lib/shriram-codename-pudhiya/images'
+import { amenityImages } from '../../lib/shriram-swargam/images'
 import Lightbox from './Lightbox'
 
 const F_JOST = 'var(--font-jost), Montserrat, sans-serif'
@@ -44,7 +44,7 @@ const Amenities = ({ setIsOpen }) => {
       id="amenities"
       style={{
         /* ── Fixed parallax background ── */
-        backgroundImage: "url('/images/shriram-codename/hero/banner2.webp')",
+        backgroundImage: "url('/images/shriram-swargam/hero/banner2.webp')",
         backgroundAttachment: 'fixed',
         backgroundSize: 'cover',
         backgroundPosition: 'center center',

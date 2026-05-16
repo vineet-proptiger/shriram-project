@@ -1,8 +1,8 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { logoImages } from "../../../lib/shriram-codename-pudhiya/images";
-import AosInit from "../../../components/shriram-codename-pudhiya/AosInit";
+import { logoImages } from "../../../lib/shriram-swargam/images";
+import AosInit from "../../../components/shriram-swargam/AosInit";
 
 const GOLD = "var(--color-teal)";
 const GOLD_DARK = "var(--color-teal-dark)";
@@ -33,7 +33,7 @@ export default function PrivacyPolicy() {
         ></div>
 
         <div className="container mx-auto px-4 md:px-8 flex items-center justify-between h-[80px]">
-          <Link href="/shriram-codename-pudhiya" className="flex items-center">
+          <Link href="/shriram-swargam" className="flex items-center">
             <img
               src={logoImages.tarc}
               alt="Shriram Codename Pudhiya"
@@ -41,7 +41,7 @@ export default function PrivacyPolicy() {
             />
           </Link>
           <Link
-            href="/shriram-codename-pudhiya"
+            href="/shriram-swargam"
             className="btn-teal shadow-lg !text-[11px] !px-3 !py-2 sm:!text-sm sm:!px-6 sm:!py-3"
           >
             <span className="hidden sm:inline">BACK TO HOME</span>
@@ -57,7 +57,7 @@ export default function PrivacyPolicy() {
       <section
         className="relative flex items-center justify-center text-center min-h-[140px] sm:min-h-[200px]"
         style={{
-          backgroundImage: "url(/images/shriram-codename/hero/banner1.webp)",
+          backgroundImage: "url(/images/shriram-swargam/hero/banner1.webp)",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
@@ -84,7 +84,7 @@ export default function PrivacyPolicy() {
             style={{ fontFamily: "var(--font-sans)" }}
           >
             <Link
-              href="/shriram-codename-pudhiya"
+              href="/shriram-swargam"
               className="hover:text-white transition-colors"
               style={{ color: "var(--color-teal)" }}
             >
@@ -635,7 +635,7 @@ export default function PrivacyPolicy() {
         >
           &copy; 2026 Shriram Codename Pudhiya. All rights reserved |{" "}
           <Link
-            href="/shriram-codename-pudhiya"
+            href="/shriram-swargam"
             style={{ color: "var(--color-teal)", textDecoration: "none" }}
           >
             Back to Home

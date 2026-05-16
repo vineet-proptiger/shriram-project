@@ -17,7 +17,7 @@ const VideoSection = ({ setIsOpen }) => {
         playsInline
         style={{ width: '100%', display: 'block', maxHeight: '600px', objectFit: 'cover' }}
       >
-        <source src="/images/shriram-codename/video.mp4" type="video/mp4" />
+        <source src="/images/shriram-swargam/video.mp4" type="video/mp4" />
       </video>
 
     </section>

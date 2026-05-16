@@ -1,6 +1,6 @@
 'use client'
 import React, { useState } from 'react'
-import { PROJECT_ID, PROJECT_NAME, API_ENDPOINT, SHEET_NAME, SECRET_KEY, CITY_DISPLAY } from '../../lib/shriram-codename-pudhiya/config'
+import { PROJECT_ID, PROJECT_NAME, API_ENDPOINT, SHEET_NAME, SECRET_KEY, CITY_DISPLAY } from '../../lib/shriram-swargam/config'
 import { buildTrackingFields } from '../../lib/formMeta'
 
 const F_SANS = 'var(--font-sans), Open Sans, sans-serif'
@@ -143,7 +143,7 @@ const LeadForm = ({ formName = 'Hero Form', btnText = 'Submit Details', btnClass
           lineHeight: 1.6, cursor: 'pointer',
         }}>
           I agree to receive updates as per the{' '}
-          <a href="/shriram-codename-pudhiya/privacy-policy" target="_blank" rel="noopener noreferrer" style={{ color: '#EB2027', textDecoration: 'underline' }}>Privacy Policy</a>
+          <a href="/shriram-swargam/privacy-policy" target="_blank" rel="noopener noreferrer" style={{ color: '#EB2027', textDecoration: 'underline' }}>Privacy Policy</a>
         </label>
       </div>
 

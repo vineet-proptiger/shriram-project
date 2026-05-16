@@ -1,7 +1,7 @@
 'use client'
 import React, { useState, useEffect } from 'react'
 import { Menu, X } from 'lucide-react'
-import { logoImages } from '../../lib/shriram-codename-pudhiya/images'
+import { logoImages } from '../../lib/shriram-swargam/images'
 
 const RED = '#EB2027'
 

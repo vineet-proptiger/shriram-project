@@ -6,7 +6,7 @@
 
 /* ─── CONFIG ─────────────────────────────────────────────────── */
 import * as mudra from '../../../lib/shriram-mudra-122-west/config'
-import * as shriram from '../../../lib/shriram-codename-pudhiya/config'
+import * as shriram from '../../../lib/shriram-swargam/config'
 import * as park63 from '../../../lib/shriram-park-63/config'
 
 const PROJECTS = {

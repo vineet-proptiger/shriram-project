@@ -1,6 +1,6 @@
 'use client'
 import React, { useState } from 'react'
-import { PROJECT_ID, PROJECT_NAME, API_ENDPOINT, SHEET_NAME, SECRET_KEY, CITY_DISPLAY } from '../../lib/shriram-codename-pudhiya/config'
+import { PROJECT_ID, PROJECT_NAME, API_ENDPOINT, SHEET_NAME, SECRET_KEY, CITY_DISPLAY } from '../../lib/shriram-swargam/config'
 import { buildTrackingFields } from '../../lib/formMeta'
 
 const GOLD = 'var(--color-gold)'

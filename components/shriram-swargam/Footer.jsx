@@ -39,7 +39,7 @@ const Footer = () => (
       <p style={{ fontSize: '12px', color: '#777', fontFamily: F_SANS }}>
         &copy; 2026 Shriram Codename Pudhiya. All rights reserved.
       </p>
-      <Link href="/shriram-codename-pudhiya/privacy-policy" style={{ fontSize: '12px', color: '#EB2027', fontFamily: F_SANS }}>
+      <Link href="/shriram-swargam/privacy-policy" style={{ fontSize: '12px', color: '#EB2027', fontFamily: F_SANS }}>
         Privacy Policy
       </Link>
     </div>

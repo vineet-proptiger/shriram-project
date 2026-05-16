@@ -2,22 +2,22 @@
 import { useState } from 'react'
 import dynamic from 'next/dynamic'
 
-import Navbar from '../../components/shriram-codename-pudhiya/Navbar'
-import Hero   from '../../components/shriram-codename-pudhiya/Hero'
+import Navbar from '../../components/shriram-swargam/Navbar'
+import Hero   from '../../components/shriram-swargam/Hero'
 
-const Overview     = dynamic(() => import('../../components/shriram-codename-pudhiya/Overview'),     { ssr: true })
-const VideoSection = dynamic(() => import('../../components/shriram-codename-pudhiya/VideoSection'), { ssr: false })
-const Amenities    = dynamic(() => import('../../components/shriram-codename-pudhiya/Amenities'),    { ssr: true })
-const Pricing      = dynamic(() => import('../../components/shriram-codename-pudhiya/Pricing'),      { ssr: true })
-const Location     = dynamic(() => import('../../components/shriram-codename-pudhiya/Location'),     { ssr: true })
-const MasterPlan   = dynamic(() => import('../../components/shriram-codename-pudhiya/MasterPlan'),   { ssr: true })
-const Footer       = dynamic(() => import('../../components/shriram-codename-pudhiya/Footer'),       { ssr: true })
+const Overview     = dynamic(() => import('../../components/shriram-swargam/Overview'),     { ssr: true })
+const VideoSection = dynamic(() => import('../../components/shriram-swargam/VideoSection'), { ssr: false })
+const Amenities    = dynamic(() => import('../../components/shriram-swargam/Amenities'),    { ssr: true })
+const Pricing      = dynamic(() => import('../../components/shriram-swargam/Pricing'),      { ssr: true })
+const Location     = dynamic(() => import('../../components/shriram-swargam/Location'),     { ssr: true })
+const MasterPlan   = dynamic(() => import('../../components/shriram-swargam/MasterPlan'),   { ssr: true })
+const Footer       = dynamic(() => import('../../components/shriram-swargam/Footer'),       { ssr: true })
 
-const Gallery      = dynamic(() => import('../../components/shriram-codename-pudhiya/Gallery'),      { ssr: false })
-const EnquireModal = dynamic(() => import('../../components/shriram-codename-pudhiya/EnquireModal'), { ssr: false })
-const AosInit      = dynamic(() => import('../../components/shriram-codename-pudhiya/AosInit'),      { ssr: false })
+const Gallery      = dynamic(() => import('../../components/shriram-swargam/Gallery'),      { ssr: false })
+const EnquireModal = dynamic(() => import('../../components/shriram-swargam/EnquireModal'), { ssr: false })
+const AosInit      = dynamic(() => import('../../components/shriram-swargam/AosInit'),      { ssr: false })
 
-export default function ShriramCodenamePudhiya() {
+export default function ShriramSwargam() {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
