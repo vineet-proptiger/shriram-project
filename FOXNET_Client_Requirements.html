@@ -1,0 +1,1201 @@
+x
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FOXNET Admin Panel — Client Requirements</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f4f6fa;
+      color: #0C1524;
+      font-size: 13.5px;
+      line-height: 1.6;
+    }
+
+    .page {
+      max-width: 860px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 52px 60px;
+    }
+
+    /* HEADER */
+    .doc-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      border-bottom: 3px solid #4F46E5;
+      padding-bottom: 24px;
+      margin-bottom: 32px;
+    }
+
+    .logo-block {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-icon {
+      width: 44px;
+      height: 44px;
+      background: linear-gradient(135deg, #4F46E5, #7C3AED);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo-icon svg {
+      width: 22px;
+      height: 22px;
+      stroke: #fff;
+      fill: none;
+      stroke-width: 2.5;
+    }
+
+    .brand-name {
+      font-size: 22px;
+      font-weight: 800;
+      color: #0C1524;
+      letter-spacing: -0.03em;
+    }
+
+    .brand-sub {
+      font-size: 11px;
+      color: #7A8BAD;
+      margin-top: 2px;
+    }
+
+    .doc-meta {
+      text-align: right;
+    }
+
+    .doc-meta div {
+      font-size: 11.5px;
+      color: #7A8BAD;
+      margin-bottom: 2px;
+    }
+
+    .doc-meta .doc-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: #4F46E5;
+    }
+
+    /* INTRO */
+    .intro-box {
+      background: #EEF2FF;
+      border-left: 4px solid #4F46E5;
+      border-radius: 0 8px 8px 0;
+      padding: 16px 20px;
+      margin-bottom: 36px;
+    }
+
+    .intro-box p {
+      font-size: 13px;
+      color: #3A4663;
+      line-height: 1.65;
+    }
+
+    .intro-box strong {
+      color: #4F46E5;
+    }
+
+    /* SECTION */
+    .section {
+      margin-bottom: 36px;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .section-num {
+      width: 26px;
+      height: 26px;
+      background: #4F46E5;
+      color: #fff;
+      font-size: 11px;
+      font-weight: 800;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .section-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: #0C1524;
+      letter-spacing: -0.01em;
+    }
+
+    /* TABLE */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 12px;
+      font-size: 12.5px;
+    }
+
+    thead tr {
+      background: #F7F9FC;
+    }
+
+    th {
+      text-align: left;
+      padding: 9px 12px;
+      font-size: 11px;
+      font-weight: 700;
+      color: #7A8BAD;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      border-bottom: 1px solid #E2E7F2;
+    }
+
+    td {
+      padding: 9px 12px;
+      border-bottom: 1px solid #E2E7F2;
+      color: #0C1524;
+      vertical-align: top;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    td:first-child {
+      font-weight: 600;
+      color: #1e2a45;
+      width: 38%;
+    }
+
+    td.detail {
+      color: #3A4663;
+      font-size: 12px;
+    }
+
+    td.status {
+      width: 100px;
+      text-align: center;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 20px;
+      font-size: 10px;
+      font-weight: 700;
+    }
+
+    .badge-purple {
+      background: #EEF2FF;
+      color: #4F46E5;
+    }
+
+    .badge-gray {
+      background: #F1F5F9;
+      color: #64748B;
+    }
+
+    .badge-green {
+      background: #ECFDF5;
+      color: #059669;
+    }
+
+    .badge-red {
+      background: #FEF2F2;
+      color: #DC2626;
+    }
+
+    /* NOTE BOX */
+    .note {
+      background: #FFFBEB;
+      border: 1px solid #FDE68A;
+      border-radius: 8px;
+      padding: 11px 14px;
+      font-size: 12px;
+      color: #92400E;
+      margin-top: 10px;
+      margin-bottom: 4px;
+    }
+
+    .note strong {
+      color: #B45309;
+    }
+
+    .note-blue {
+      background: #EFF6FF;
+      border: 1px solid #BFDBFE;
+      color: #1E40AF;
+    }
+
+    .note-blue strong {
+      color: #1E40AF;
+    }
+
+    /* TECH TABLE */
+    .tech-table td:first-child {
+      color: #7A8BAD;
+      font-weight: 500;
+      width: 28%;
+    }
+
+    .tech-name {
+      font-weight: 700;
+      color: #4F46E5;
+    }
+
+    /* PERSONA FIELDS */
+    .field-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px;
+      margin-top: 10px;
+    }
+
+    .field-item {
+      background: #F7F9FC;
+      border: 1px solid #E2E7F2;
+      border-radius: 6px;
+      padding: 7px 11px;
+      font-size: 12px;
+    }
+
+    .field-num {
+      color: #7A8BAD;
+      font-size: 10px;
+      font-weight: 700;
+      margin-right: 5px;
+    }
+
+    /* CHECKLIST */
+    .checklist-table td:first-child {
+      width: 40px;
+      text-align: center;
+      font-weight: 700;
+      color: #7A8BAD;
+    }
+
+    .checklist-table td:last-child {
+      width: 100px;
+      text-align: center;
+    }
+
+    .check-box {
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      border: 1.5px solid #CAD1E4;
+      border-radius: 4px;
+    }
+
+    /* Q&A */
+    .qa-block {
+      background: #F7F9FC;
+      border: 1px solid #E2E7F2;
+      border-radius: 8px;
+      padding: 14px 16px;
+      margin-bottom: 10px;
+    }
+
+    .qa-q {
+      font-weight: 700;
+      font-size: 13px;
+      color: #0C1524;
+      margin-bottom: 8px;
+    }
+
+    .qa-opt {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12.5px;
+      color: #3A4663;
+      margin-bottom: 5px;
+    }
+
+    .qa-opt .cb {
+      width: 14px;
+      height: 14px;
+      border: 1.5px solid #CAD1E4;
+      border-radius: 3px;
+      flex-shrink: 0;
+    }
+
+    /* DIVIDER */
+    .divider {
+      border: none;
+      border-top: 1px solid #E2E7F2;
+      margin: 28px 0;
+    }
+
+    /* FOOTER */
+    .doc-footer {
+      margin-top: 48px;
+      border-top: 2px solid #E2E7F2;
+      padding-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer-left {
+      font-size: 11px;
+      color: #7A8BAD;
+    }
+
+    .footer-right {
+      font-size: 11px;
+      color: #7A8BAD;
+      text-align: right;
+    }
+
+    .warning-box {
+      background: #FEF2F2;
+      border: 1px solid #FECACA;
+      border-radius: 8px;
+      padding: 13px 16px;
+      font-size: 12.5px;
+      color: #991B1B;
+      margin-top: 20px;
+    }
+
+    .warning-box strong {
+      color: #7F1D1D;
+    }
+
+    .secure-box {
+      background: #ECFDF5;
+      border: 1px solid #6EE7B7;
+      border-radius: 8px;
+      padding: 13px 16px;
+      font-size: 12.5px;
+      color: #065F46;
+      margin-top: 10px;
+    }
+
+    @media print {
+      body {
+        background: #fff;
+      }
+
+      .page {
+        padding: 30px 40px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+
+    <!-- HEADER -->
+    <div class="doc-header">
+      <div class="logo-block">
+        <div class="logo-icon">
+          <svg viewBox="0 0 24 24">
+            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+          </svg>
+        </div>
+        <div>
+          <div class="brand-name">FOXNET</div>
+          <div class="brand-sub">AI Influencer OS</div>
+        </div>
+      </div>
+      <div class="doc-meta">
+        <div class="doc-title">Client Requirements Document</div>
+        <div>Project: FOXNET Admin Panel</div>
+        <div>Date: May 2026</div>
+        <div>Version: 1.0</div>
+      </div>
+    </div>
+
+    <!-- INTRO -->
+    <div class="intro-box">
+      <p>This document lists <strong>everything we need from you</strong> before development begins on the FOXNET Admin
+        Panel. Please go through each section carefully, collect the required information, and send it back to us.
+        <strong>Development will not start until all required items are received.</strong> Missing items cause delays
+        and additional cost.</p>
+    </div>
+
+    <!-- TECH STACK -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-num" style="background:#059669">T</div>
+        <div class="section-title">Technology Stack — What We Are Building With</div>
+      </div>
+      <table class="tech-table">
+        <thead>
+          <tr>
+            <th>Layer</th>
+            <th>Technology</th>
+            <th>Why</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Frontend Framework</td>
+            <td><span class="tech-name">Next.js 14 (React)</span></td>
+            <td class="detail">Server-side rendering, built-in API routes, Google Auth support, best performance for
+              dashboards</td>
+          </tr>
+          <tr>
+            <td>Styling</td>
+            <td><span class="tech-name">Tailwind CSS</span></td>
+            <td class="detail">Fast, consistent UI — matches your existing approved design mockup</td>
+          </tr>
+          <tr>
+            <td>Database</td>
+            <td><span class="tech-name">Supabase (Recommended)</span></td>
+            <td class="detail">Real-time data, easy auth integration, PostgreSQL — suits personas + content data model
+            </td>
+          </tr>
+          <tr>
+            <td>Authentication</td>
+            <td><span class="tech-name">NextAuth.js + Google</span></td>
+            <td class="detail">Secure Google login with team access control (max 4 accounts)</td>
+          </tr>
+          <tr>
+            <td>Hosting</td>
+            <td><span class="tech-name">Vercel (Recommended)</span></td>
+            <td class="detail">One-click Next.js deployment, custom domain, automatic HTTPS</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="note note-blue"><strong>Note:</strong> If you prefer Firebase over Supabase, please indicate this.
+        Both options work — Supabase is our recommendation for this specific project.</div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- SECTION 1 -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-num">1</div>
+        <div class="section-title">AI Service API Keys</div>
+      </div>
+      <p style="font-size:12.5px;color:#3A4663;margin-bottom:12px">These keys are required to display live API usage,
+        credit burn rates, and connection health inside the admin panel dashboard.</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Service</th>
+            <th>What We Need</th>
+            <th>Where to Find It</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Anthropic (Claude)</td>
+            <td class="detail">API Key</td>
+            <td class="detail">console.anthropic.com → API Keys</td>
+          </tr>
+          <tr>
+            <td>ElevenLabs</td>
+            <td class="detail">API Key</td>
+            <td class="detail">elevenlabs.io → Profile → API Key</td>
+          </tr>
+          <tr>
+            <td>Enhancor</td>
+            <td class="detail">API Key</td>
+            <td class="detail">Enhancor dashboard → Settings</td>
+          </tr>
+          <tr>
+            <td>OpenAI (GPT)</td>
+            <td class="detail">API Key</td>
+            <td class="detail">platform.openai.com → API Keys</td>
+          </tr>
+          <tr>
+            <td>Google Gemini</td>
+            <td class="detail">API Key</td>
+            <td class="detail">aistudio.google.com → Get API Key</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="secure-box"><strong>Security:</strong> Please do not send API keys over plain email or chat. Share
+        them via 1Password, Bitwarden, or a restricted-access encrypted document.</div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- SECTION 2 -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-num">2</div>
+        <div class="section-title">Database Credentials</div>
+      </div>
+      <p style="font-size:12.5px;color:#3A4663;margin-bottom:12px">All persona data, content queue, workflow status, and
+        settings will be stored here.</p>
+
+      <p style="font-weight:700;font-size:12.5px;margin-bottom:8px;color:#4F46E5">Option A — Supabase (Recommended)</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>Details</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Project URL</td>
+            <td class="detail">e.g. https://xyzabc.supabase.co — from Supabase → Settings → API</td>
+          </tr>
+          <tr>
+            <td>Anon Public Key</td>
+            <td class="detail">From Supabase → Settings → API → Project API Keys</td>
+          </tr>
+          <tr>
+            <td>Service Role Key</td>
+            <td class="detail">Same location — keep this secret, do not expose publicly</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p style="font-weight:700;font-size:12.5px;margin:14px 0 8px;color:#4F46E5">Option B — Firebase</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>Details</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Firebase Config Object</td>
+            <td class="detail">apiKey, authDomain, projectId, storageBucket, messagingSenderId, appId</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="note"><strong>Action Required:</strong> Please confirm which database you are using. If you do not
+        have one set up yet, inform us and we will set it up for you.</div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- SECTION 3 -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-num">3</div>
+        <div class="section-title">Google Authentication</div>
+      </div>
+      <p style="font-size:12.5px;color:#3A4663;margin-bottom:12px">The panel uses Google login only. All other Google
+        accounts will be automatically blocked.</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>Details</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Google OAuth Client ID</td>
+            <td class="detail">Google Cloud Console → APIs & Services → Credentials → OAuth 2.0 Client ID</td>
+          </tr>
+          <tr>
+            <td>Google OAuth Client Secret</td>
+            <td class="detail">Same location as Client ID</td>
+          </tr>
+          <tr>
+            <td>Authorized Redirect URI</td>
+            <td class="detail">We will provide this once your domain is confirmed</td>
+          </tr>
+          <tr>
+            <td>Primary Admin Gmail</td>
+            <td class="detail">Main admin account — full access, manages team list</td>
+          </tr>
+          <tr>
+            <td>Team Member Gmail 1</td>
+            <td class="detail">Optional — full read/write access to panel</td>
+          </tr>
+          <tr>
+            <td>Team Member Gmail 2</td>
+            <td class="detail">Optional</td>
+          </tr>
+          <tr>
+            <td>Team Member Gmail 3</td>
+            <td class="detail">Optional — maximum 3 team members allowed per your specification</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <hr class="divider">
+
+    <!-- SECTION 4 -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-num">4</div>
+        <div class="section-title">Automation Engine — n8n</div>
+      </div>
+      <p style="font-size:12.5px;color:#3A4663;margin-bottom:12px">The panel connects to your n8n instance to trigger
+        pipelines, monitor workflow health, and fire Master Pause and TRIGGER DROP actions.</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>Details</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>n8n Instance URL</td>
+            <td class="detail">e.g. https://n8n.yourdomain.com</td>
+          </tr>
+          <tr>
+            <td>n8n API Key</td>
+            <td class="detail">n8n → Settings → API → Create API Key</td>
+          </tr>
+          <tr>
+            <td>Webhook — Trigger Post</td>
+            <td class="detail">Fires a single persona's pipeline immediately</td>
+          </tr>
+          <tr>
+            <td>Webhook — Master Pause</td>
+            <td class="detail">Stops all 20 persona pipelines simultaneously</td>
+          </tr>
+          <tr>
+            <td>Webhook — TRIGGER DROP</td>
+            <td class="detail">Fires the full SaaS Drop campaign</td>
+          </tr>
+          <tr>
+            <td>Webhook — Skip Today</td>
+            <td class="detail">Skips current day's schedule for a persona</td>
+          </tr>
+          <tr>
+            <td>Webhook — Restart Pipeline</td>
+            <td class="detail">Restarts a specific persona pipeline from beginning</td>
+          </tr>
+          <tr>
+            <td>All Active Workflow List</td>
+            <td class="detail">Name + Workflow ID of every n8n workflow to monitor in the dashboard</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="note"><strong>Note:</strong> If the webhooks do not exist yet, share your n8n credentials and we will
+        document exactly what needs to be created. Your automation engineer then creates them in n8n.</div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- SECTION 5 -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-num">5</div>
+        <div class="section-title">Community Platforms — Blast Channels</div>
+      </div>
+      <p style="font-size:12.5px;color:#3A4663;margin-bottom:12px">The Community Hub page sends blasts to all 60 groups
+        across Telegram, WhatsApp, and Facebook simultaneously.</p>
+
+      <p style="font-weight:700;font-size:12px;margin-bottom:8px">Telegram</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>Details</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Bot Token</td>
+            <td class="detail">From @BotFather on Telegram — create a bot and copy the token</td>
+          </tr>
+          <tr>
+            <td>Group Chat IDs</td>
+            <td class="detail">One per persona — all 20 personas (20 group IDs total)</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p style="font-weight:700;font-size:12px;margin:12px 0 8px">WhatsApp</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>Details</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>API Provider</td>
+            <td class="detail">e.g. Twilio, 360dialog, or Meta Cloud API — which one are you using?</td>
+          </tr>
+          <tr>
+            <td>API Key / Access Token</td>
+            <td class="detail">From your WhatsApp provider dashboard</td>
+          </tr>
+          <tr>
+            <td>Phone Number ID</td>
+            <td class="detail">Registered WhatsApp business number</td>
+          </tr>
+          <tr>
+            <td>Group IDs</td>
+            <td class="detail">One per persona — all 20 personas</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p style="font-weight:700;font-size:12px;margin:12px 0 8px">Facebook</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>Details</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Page Access Tokens</td>
+            <td class="detail">One per persona Facebook page</td>
+          </tr>
+          <tr>
+            <td>Group IDs</td>
+            <td class="detail">One per persona — all 20 personas</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p style="font-weight:700;font-size:12px;margin:12px 0 8px">Discord</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>Details</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Webhook URLs</td>
+            <td class="detail">One webhook URL per persona that uses Discord</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <hr class="divider">
+
+    <!-- SECTION 6 -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-num">6</div>
+        <div class="section-title">All 20 Persona Data — Google Sheet Required</div>
+      </div>
+      <p style="font-size:12.5px;color:#3A4663;margin-bottom:12px">This is the <strong>most critical data
+          requirement</strong>. Please prepare a Google Sheet or Excel file with the following 22 fields filled in for
+        each of your 20 AI personas and share it with us before development begins.</p>
+
+      <div class="field-grid">
+        <div class="field-item"><span class="field-num">01</span>Persona Name</div>
+        <div class="field-item"><span class="field-num">02</span>Handle (@ username)</div>
+        <div class="field-item"><span class="field-num">03</span>Niche (Psychology / Finance / Wellness etc.)</div>
+        <div class="field-item"><span class="field-num">04</span>Target Audience Description</div>
+        <div class="field-item"><span class="field-num">05</span>Brand Colour (hex code e.g. #6366F1)</div>
+        <div class="field-item"><span class="field-num">06</span>Avatar Image (file upload or URL)</div>
+        <div class="field-item"><span class="field-num">07</span>Language (English / Spanish / French etc.)</div>
+        <div class="field-item"><span class="field-num">08</span>Persona Prompt (Claude AI brain definition)</div>
+        <div class="field-item"><span class="field-num">09</span>ElevenLabs Voice ID</div>
+        <div class="field-item"><span class="field-num">10</span>Voice Stability (0.0 – 1.0)</div>
+        <div class="field-item"><span class="field-num">11</span>Voice Similarity Boost (0.0 – 1.0)</div>
+        <div class="field-item"><span class="field-num">12</span>Platforms (YouTube / Instagram / TikTok etc.)</div>
+        <div class="field-item"><span class="field-num">13</span>Daily Post Time</div>
+        <div class="field-item"><span class="field-num">14</span>Posts Per Day</div>
+        <div class="field-item"><span class="field-num">15</span>Active Days (e.g. Mon–Sat)</div>
+        <div class="field-item"><span class="field-num">16</span>Approval Mode (Supervised / Full Auto)</div>
+        <div class="field-item"><span class="field-num">17</span>Affiliate Link</div>
+        <div class="field-item"><span class="field-num">18</span>Product URL</div>
+        <div class="field-item"><span class="field-num">19</span>Telegram Group ID</div>
+        <div class="field-item"><span class="field-num">20</span>WhatsApp Group ID</div>
+        <div class="field-item"><span class="field-num">21</span>Facebook Group ID</div>
+        <div class="field-item"><span class="field-num">22</span>Discord Webhook URL</div>
+      </div>
+      <div class="note"><strong>Action Required:</strong> We cannot build or test the Personas section without this
+        data. Please prepare this sheet as early as possible and share it with us.</div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- SECTION 7 -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-num">7</div>
+        <div class="section-title">Hosting & Domain</div>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>Details</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Panel Domain Name</td>
+            <td class="detail">e.g. admin.foxnet.io or panel.yourdomain.com</td>
+          </tr>
+          <tr>
+            <td>Domain Ownership</td>
+            <td class="detail">Do you already own this domain? Yes / No</td>
+          </tr>
+          <tr>
+            <td>Hosting Preference</td>
+            <td class="detail">Vercel (recommended) / VPS / Other — please specify</td>
+          </tr>
+          <tr>
+            <td>VPS IP Address</td>
+            <td class="detail">Required only if you choose VPS hosting</td>
+          </tr>
+          <tr>
+            <td>VPS SSH Access</td>
+            <td class="detail">Username + SSH key or password — only if VPS hosting is chosen</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <hr class="divider">
+
+    <!-- SECTION 8 -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-num">8</div>
+        <div class="section-title">Infrastructure Services — Stack Status</div>
+      </div>
+      <p style="font-size:12.5px;color:#3A4663;margin-bottom:12px">The Settings page shows a live green/red status for
+        every service in your infrastructure. Please confirm which services you are using and share connection details.
+      </p>
+      <table>
+        <thead>
+          <tr>
+            <th>Service</th>
+            <th>Using? (Yes / No)</th>
+            <th>Connection Detail Needed</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>n8n</td>
+            <td class="detail">______</td>
+            <td class="detail">Instance URL</td>
+          </tr>
+          <tr>
+            <td>Redis</td>
+            <td class="detail">______</td>
+            <td class="detail">Connection URL</td>
+          </tr>
+          <tr>
+            <td>Supabase</td>
+            <td class="detail">______</td>
+            <td class="detail">Project URL</td>
+          </tr>
+          <tr>
+            <td>Qdrant</td>
+            <td class="detail">______</td>
+            <td class="detail">URL + API Key</td>
+          </tr>
+          <tr>
+            <td>Vercel</td>
+            <td class="detail">______</td>
+            <td class="detail">Auto-detected — no action needed</td>
+          </tr>
+          <tr>
+            <td>Shopify</td>
+            <td class="detail">______</td>
+            <td class="detail">Store URL + Admin API Key</td>
+          </tr>
+          <tr>
+            <td>Gumroad</td>
+            <td class="detail">______</td>
+            <td class="detail">API Key</td>
+          </tr>
+          <tr>
+            <td>Printify</td>
+            <td class="detail">______</td>
+            <td class="detail">API Key</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <hr class="divider">
+
+    <!-- SECTION 9 -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-num">9</div>
+        <div class="section-title">Design & Brand Assets</div>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>Details</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Logo File</td>
+            <td class="detail">SVG preferred, PNG accepted — high resolution</td>
+          </tr>
+          <tr>
+            <td>Brand Primary Colour</td>
+            <td class="detail">Hex code — confirm or change from the mockup</td>
+          </tr>
+          <tr>
+            <td>Brand Guidelines</td>
+            <td class="detail">PDF or link — if you have an existing brand guide</td>
+          </tr>
+          <tr>
+            <td>HTML Mockup Review</td>
+            <td class="detail">Have you reviewed the existing HTML mockup? Are you satisfied with the design, or do you
+              need changes listed before we begin?</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="note"><strong>Important:</strong> Design changes requested after development has started will increase
+        time and cost. Please review the HTML mockup carefully and submit all change requests before development begins.
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- SECTION 10 -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-num">10</div>
+        <div class="section-title">Scope Confirmation — Please Answer Before We Begin</div>
+      </div>
+
+      <div class="qa-block">
+        <div class="qa-q">Q1. What are we building?</div>
+        <div class="qa-opt">
+          <div class="cb"></div>Frontend UI only — no live backend (mock data stays, for demo purposes)
+        </div>
+        <div class="qa-opt">
+          <div class="cb"></div>Full stack — frontend + Supabase/Firebase backend connected with real data
+        </div>
+        <div class="qa-opt">
+          <div class="cb"></div>Full stack + n8n webhook integration (complete live system)
+        </div>
+      </div>
+
+      <div class="qa-block">
+        <div class="qa-q">Q2. Is your n8n automation engine already running and live?</div>
+        <div class="qa-opt">
+          <div class="cb"></div>Yes — fully set up and live
+        </div>
+        <div class="qa-opt">
+          <div class="cb"></div>Partially set up — some workflows exist
+        </div>
+        <div class="qa-opt">
+          <div class="cb"></div>Not yet — we will set it up together
+        </div>
+      </div>
+
+      <div class="qa-block">
+        <div class="qa-q">Q3. Do you want a staging/test environment before production?</div>
+        <div class="qa-opt">
+          <div class="cb"></div>Yes — test URL first, then deploy to production after approval
+        </div>
+        <div class="qa-opt">
+          <div class="cb"></div>No — deploy directly to production
+        </div>
+      </div>
+
+      <div class="qa-block">
+        <div class="qa-q">Q4. Future scope timeline (items not included in this build)</div>
+        <div style="font-size:12px;color:#3A4663;margin-top:4px">
+          <div style="display:flex;gap:12px;margin-bottom:6px;align-items:center">
+            <span style="font-weight:600;width:260px">Revenue Tracking Dashboard</span>
+            <span>Target date: ________________</span>
+          </div>
+          <div style="display:flex;gap:12px;margin-bottom:6px;align-items:center">
+            <span style="font-weight:600;width:260px">Analytics & Performance Charts</span>
+            <span>Target date: ________________</span>
+          </div>
+          <div style="display:flex;gap:12px;align-items:center">
+            <span style="font-weight:600;width:260px">Community Manager (AI comment replies)</span>
+            <span>Target date: ________________</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- MASTER CHECKLIST -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-num" style="background:#DC2626">✓</div>
+        <div class="section-title">Master Delivery Checklist — Complete Before Day 1</div>
+      </div>
+      <p style="font-size:12.5px;color:#3A4663;margin-bottom:12px">Please go through this checklist and confirm each
+        item is ready before we schedule the project kickoff.</p>
+      <table class="checklist-table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th style="width:auto">Item</th>
+            <th>Ready</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>All 5 AI API keys (Claude, ElevenLabs, Enhancor, GPT, Gemini)</td>
+            <td class="status">
+              <div class="check-box"></div>
+            </td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Database credentials (Supabase or Firebase — confirm which)</td>
+            <td class="status">
+              <div class="check-box"></div>
+            </td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Google OAuth Client ID + Client Secret</td>
+            <td class="status">
+              <div class="check-box"></div>
+            </td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Primary Admin Gmail + up to 3 team member Gmail IDs</td>
+            <td class="status">
+              <div class="check-box"></div>
+            </td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>n8n instance URL + API Key + all webhook URLs</td>
+            <td class="status">
+              <div class="check-box"></div>
+            </td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>Telegram Bot Token + all 20 persona group IDs</td>
+            <td class="status">
+              <div class="check-box"></div>
+            </td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td>WhatsApp API credentials + all 20 persona group IDs</td>
+            <td class="status">
+              <div class="check-box"></div>
+            </td>
+          </tr>
+          <tr>
+            <td>8</td>
+            <td>Facebook Page Access Tokens + all 20 persona group IDs</td>
+            <td class="status">
+              <div class="check-box"></div>
+            </td>
+          </tr>
+          <tr>
+            <td>9</td>
+            <td>Discord webhook URLs (for applicable personas)</td>
+            <td class="status">
+              <div class="check-box"></div>
+            </td>
+          </tr>
+          <tr>
+            <td>10</td>
+            <td>All 20 personas data sheet (22 fields per persona)</td>
+            <td class="status">
+              <div class="check-box"></div>
+            </td>
+          </tr>
+          <tr>
+            <td>11</td>
+            <td>Domain name confirmed + ownership verified</td>
+            <td class="status">
+              <div class="check-box"></div>
+            </td>
+          </tr>
+          <tr>
+            <td>12</td>
+            <td>Hosting preference confirmed (Vercel / VPS)</td>
+            <td class="status">
+              <div class="check-box"></div>
+            </td>
+          </tr>
+          <tr>
+            <td>13</td>
+            <td>Infrastructure services list confirmed (Section 8)</td>
+            <td class="status">
+              <div class="check-box"></div>
+            </td>
+          </tr>
+          <tr>
+            <td>14</td>
+            <td>Logo + brand assets provided</td>
+            <td class="status">
+              <div class="check-box"></div>
+            </td>
+          </tr>
+          <tr>
+            <td>15</td>
+            <td>HTML mockup approved OR change requests list submitted</td>
+            <td class="status">
+              <div class="check-box"></div>
+            </td>
+          </tr>
+          <tr>
+            <td>16</td>
+            <td>Scope confirmation answered (Q1 – Q4)</td>
+            <td class="status">
+              <div class="check-box"></div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="warning-box">
+        <strong>Important:</strong> Development will not begin until all required items are received and confirmed.
+        Partial information results in a placeholder build that requires rework — which increases both cost and delivery
+        timeline.
+      </div>
+
+      <div class="secure-box" style="margin-top:12px">
+        <strong>Security Reminder:</strong> Never send API keys, passwords, or tokens over plain email or chat messages.
+        Use a secure method such as 1Password share link, Bitwarden send, or a restricted-access Google Doc. We take
+        your credentials security seriously.
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="doc-footer">
+      <div class="footer-left">
+        <div style="font-weight:700;color:#0C1524;margin-bottom:3px">FOXNET Admin Panel</div>
+        <div>Client Requirements Document v1.0 — May 2026</div>
+      </div>
+      <div class="footer-right">
+        <div>Questions? Contact your development team</div>
+        <div style="margin-top:3px">All credentials must be shared securely</div>
+      </div>
+    </div>
+
+  </div>
+</body>
+
+</html>
