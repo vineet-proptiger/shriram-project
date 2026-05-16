@@ -5,10 +5,10 @@ import { PROJECT_ID, PROJECT_NAME, API_ENDPOINT, SHEET_NAME, SECRET_KEY, CITY_DI
 import { buildTrackingFields } from '../../lib/formMeta'
 import { overviewImage } from '../../lib/shriram-mudra-122-west/images'
 
-const GOLD      = 'var(--color-teal)'
+const GOLD = 'var(--color-teal)'
 const GOLD_DARK = 'var(--color-teal-dark)'
-const F_SANS    = 'var(--font-sans), Open Sans, sans-serif'
-const F_JOST    = 'var(--font-jost), Montserrat, sans-serif'
+const F_SANS = 'var(--font-sans), Open Sans, sans-serif'
+const F_JOST = 'var(--font-jost), Montserrat, sans-serif'
 
 const PREVIEW_TEXT = `Shriram 122 West offers thoughtfully designed 2 & 3 BHK apartments in the rapidly developing location of Mangadu, Chennai. Developed by Shriram Properties, this residential community blends modern design with comfortable living spaces ideal for families and professionals. The homes feature spacious layouts, ample ventilation, and contemporary interiors that ensure a balanced and convenient lifestyle.`
 
@@ -91,8 +91,8 @@ const EarlyForm = () => {
     <form onSubmit={submit} style={{ display: 'flex', flexDirection: 'column', gap: '14px', height: '100%' }}>
       {[
         { name: 'fullname', label: 'Full Name', placeholder: 'Enter your full name', required: true },
-        { name: 'email',    label: 'Email Address', placeholder: 'Email Id (optional)', required: false },
-        { name: 'phone',    label: 'Mobile Number', placeholder: '10-digit mobile number', required: true, maxLength: 10 },
+        { name: 'email', label: 'Email Address', placeholder: 'Email Id (optional)', required: false },
+        { name: 'phone', label: 'Mobile Number', placeholder: '10-digit mobile number', required: true, maxLength: 10 },
       ].map(f => (
         <div key={f.name}>
           <label style={{ display: 'block', fontSize: '11px', fontWeight: '700', color: '#6b7280', fontFamily: F_JOST, letterSpacing: '0.06em', textTransform: 'uppercase', marginBottom: '5px' }}>
@@ -101,7 +101,8 @@ const EarlyForm = () => {
           <input name={f.name} required={f.required} value={form[f.name]} onChange={handle}
             placeholder={f.placeholder} maxLength={f.maxLength}
             onFocus={() => setFocused(f.name)} onBlur={() => setFocused('')}
-            style={{ ...inputStyle,
+            style={{
+              ...inputStyle,
               borderColor: focused === f.name ? 'var(--color-teal)' : '#e5e7eb',
               boxShadow: focused === f.name ? '0 0 0 3px var(--color-teal-bg)' : 'none',
             }}
@@ -162,7 +163,7 @@ const Overview = () => (
             position: 'relative', borderRadius: '16px', overflow: 'hidden',
             boxShadow: '0 16px 48px rgba(0,0,0,0.14)',
             border: '3px solid #fff', width: '100%',
-            height: '100%', minHeight: '520px',
+            height: '100%', minHeight: '400px',
           }}>
             <Image src={overviewImage} alt="Shriram Mudra Mangadu Chennai" fill className="object-cover"
               sizes="(max-width: 1024px) 100vw, 33vw" priority />
@@ -176,7 +177,7 @@ const Overview = () => (
             boxShadow: '0 4px 20px rgba(0,0,0,0.06)', border: '1px solid #f0f0f0',
             display: 'flex', flexDirection: 'column', gap: '18px', width: '100%',
           }}>
-            <p style={{ color: '#374151', fontFamily: F_SANS, lineHeight: 1.85, fontSize: '14px', margin: 0, textAlign: 'justify' }}>
+            <p style={{ color: '#374151', fontFamily: F_SANS, lineHeight: 1.85, fontSize: '13px', margin: 0, textAlign: 'justify' }}>
               {PREVIEW_TEXT}{MORE_TEXT}
             </p>
           </div>

@@ -4,14 +4,14 @@ import Image from 'next/image'
 import { heroImages } from '../../lib/shriram-mudra-122-west/images'
 
 const F_JOST = 'var(--font-jost), Montserrat, sans-serif'
-const F_SANS  = 'var(--font-sans), "Open Sans", sans-serif'
+const F_SANS = 'var(--font-sans), "Open Sans", sans-serif'
 
 const slides = [heroImages.banner, heroImages.banner2]
 const INTERVAL = 5500
 
 export default function Hero({ setIsOpen }) {
   const [cur, setCur] = useState(0)
-  const rafRef  = useRef(null)
+  const rafRef = useRef(null)
 
   useEffect(() => {
     cancelAnimationFrame(rafRef.current)
@@ -22,10 +22,10 @@ export default function Hero({ setIsOpen }) {
   const goTo = (idx) => setCur(idx)
 
   const specs = [
-    { val: '5',      lbl: 'Acres\nLand Parcel'  },
-    { val: '3 BHK',  lbl: 'Config-\nuration'    },
-    { val: 'Porur',  lbl: 'Near IT\nHub'         },
-    { val: '₹58L+', lbl: 'Starting\nPrice'       },
+    { val: '5', lbl: 'Acres\nLand Parcel' },
+    { val: '3 BHK', lbl: 'Config-\nuration' },
+    { val: 'Porur', lbl: 'Near IT\nHub' },
+    { val: '₹58L+', lbl: 'Starting\nPrice' },
   ]
 
   return (
@@ -65,7 +65,7 @@ export default function Hero({ setIsOpen }) {
               color: 'var(--color-teal)',
               border: '1px solid var(--color-teal-light)',
               padding: '4px 10px', borderRadius: '2px',
-              background: 'rgba(13,26,36,0.65)', backdropFilter: 'blur(6px)',
+              background: '#fff', backdropFilter: 'blur(6px)',
             }}>Booking Open</span>
           </div>
 
@@ -102,7 +102,7 @@ export default function Hero({ setIsOpen }) {
               borderBottom: i < 2 ? '1px solid rgba(13,26,36,0.1)' : 'none',
             }}>
               <p style={{ fontFamily: F_JOST, fontSize: '20px', fontWeight: 700, color: 'var(--color-dark)', lineHeight: 1, marginBottom: '3px' }}>{s.val}</p>
-              <p style={{ fontFamily: F_SANS, fontSize: '9px', fontWeight: 700, letterSpacing: '0.13em', textTransform: 'uppercase', color: '#6b7280', lineHeight: 1.35, whiteSpace: 'pre-line', margin: 0 }}>{s.lbl}</p>
+              <p style={{ fontFamily: F_SANS, fontSize: '9px', fontWeight: 700, letterSpacing: '0.13em', textTransform: 'uppercase', color: '#4b5563', lineHeight: 1.35, whiteSpace: 'pre-line', margin: 0 }}>{s.lbl}</p>
             </div>
           ))}
         </div>
@@ -126,7 +126,7 @@ export default function Hero({ setIsOpen }) {
 
         {/* Mobile — CTA */}
         <div style={{ background: '#0d1a24', padding: '14px 16px', display: 'flex', flexDirection: 'column', gap: '8px' }}>
-          <p style={{ fontFamily: F_JOST, fontSize: '13px', fontWeight: 600, color: 'rgba(255,255,255,0.55)', textAlign: 'center', margin: 0 }}>
+          <p style={{ fontFamily: F_JOST, fontSize: '13px', fontWeight: 600, color: 'rgba(255,255,255,0.9)', textAlign: 'center', margin: 0 }}>
             2, 2.5 &amp; 3 BHK Premium Residences
           </p>
           <p className="blink-price" style={{ fontFamily: F_JOST, fontSize: '26px', fontWeight: 700, color: 'var(--color-teal)', textAlign: 'center', lineHeight: 1, margin: 0 }}>
@@ -198,7 +198,7 @@ export default function Hero({ setIsOpen }) {
                 color: 'var(--color-teal)',
                 border: '1px solid var(--color-teal-light)',
                 padding: '5px 14px', borderRadius: '2px',
-                background: 'rgba(13,26,36,0.5)', backdropFilter: 'blur(8px)',
+                background: '#fff', backdropFilter: 'blur(8px)',
               }}>
                 Booking Open
               </span>
@@ -255,22 +255,15 @@ export default function Hero({ setIsOpen }) {
             display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: '8px',
             borderRight: '1px solid rgba(255,255,255,0.06)',
           }}>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
-              {[
-                'Shriram 122 West, Mangadu, Chennai',
-                'Modern 2, 2.5 & 3 BHK Residences',
-                'Premium High-Rise Residential Towers',
-                'Modern Clubhouse & Lifestyle Amenities',
-              ].map((line, i) => (
-                <p key={i} style={{ fontFamily: F_SANS, fontSize: '12px', lineHeight: 1.6, color: 'rgba(255,255,255,0.65)', fontWeight: 400, margin: 0, textAlign: 'center' }}>
-                  {line}
-                </p>
-              ))}
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '0' }}>
+              <p style={{ fontFamily: F_SANS, fontSize: '12px', lineHeight: 1.6, color: 'rgba(255,255,255,0.9)', fontWeight: 500, margin: 0, textAlign: 'center' }}>
+                Shriram 122 West, Mangadu, Chennai • Modern 2, 2.5 &amp; 3 BHK Residences • Premium High-Rise Residential Towers • Modern Clubhouse &amp; Lifestyle Amenities
+              </p>
             </div>
 
             <div style={{ display: 'flex', gap: '4px', marginTop: '4px' }}>
               {[
-                { icon: '🎧', label: 'Call\nBack'  },
+                { icon: '🎧', label: 'Call\nBack' },
                 { icon: '🚗', label: 'Site\nVisit' },
                 { icon: '🏷️', label: 'Best\nPrice' },
               ].map((b, i) => (
@@ -282,7 +275,7 @@ export default function Hero({ setIsOpen }) {
                   background: 'rgba(255,255,255,0.04)',
                 }}>
                   <span style={{ fontSize: '13px', lineHeight: 1 }}>{b.icon}</span>
-                  <span style={{ fontFamily: F_SANS, fontSize: '9px', fontWeight: 600, letterSpacing: '0.06em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.3)', textAlign: 'center', lineHeight: 1.2, whiteSpace: 'pre-line' }}>{b.label}</span>
+                  <span style={{ fontFamily: F_SANS, fontSize: '9px', fontWeight: 600, letterSpacing: '0.06em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.85)', textAlign: 'center', lineHeight: 1.2, whiteSpace: 'pre-line' }}>{b.label}</span>
                 </div>
               ))}
             </div>
@@ -303,7 +296,7 @@ export default function Hero({ setIsOpen }) {
                 background: 'var(--color-bg, #F4F8F9)',
               }}>
                 <p style={{ fontFamily: F_JOST, fontSize: '20px', fontWeight: 700, color: 'var(--color-dark)', lineHeight: 1, marginBottom: '3px' }}>{s.val}</p>
-                <p style={{ fontFamily: F_SANS, fontSize: '9px', fontWeight: 700, letterSpacing: '0.13em', textTransform: 'uppercase', color: '#6b7280', lineHeight: 1.35, whiteSpace: 'pre-line', margin: 0 }}>{s.lbl}</p>
+                <p style={{ fontFamily: F_SANS, fontSize: '9px', fontWeight: 700, letterSpacing: '0.13em', textTransform: 'uppercase', color: '#4b5563', lineHeight: 1.35, whiteSpace: 'pre-line', margin: 0 }}>{s.lbl}</p>
               </div>
             ))}
           </div>
@@ -336,7 +329,7 @@ export default function Hero({ setIsOpen }) {
             display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: '10px',
           }}>
             <div style={{ textAlign: 'center' }}>
-              <p style={{ fontFamily: F_SANS, fontSize: '12px', fontWeight: 600, color: 'rgba(255,255,255,0.4)', letterSpacing: '0.06em', marginBottom: '4px' }}>
+              <p style={{ fontFamily: F_SANS, fontSize: '12px', fontWeight: 600, color: 'rgba(255,255,255,0.9)', letterSpacing: '0.06em', marginBottom: '4px' }}>
                 2, 2.5 &amp; 3 BHK Residences From
               </p>
               <p className="blink-price" style={{ fontFamily: F_JOST, fontSize: '30px', fontWeight: 700, color: 'var(--color-teal)', lineHeight: 1, margin: 0 }}>
