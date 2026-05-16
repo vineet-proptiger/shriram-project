@@ -28,7 +28,7 @@ const Hero = ({ setIsOpen }) => {
       <div className="flex flex-col lg:flex-row">
         {/* LEFT — Image Carousel */}
         <div
-          className="w-full lg:w-[62%] relative h-[250px] sm:h-[350px] lg:h-auto lg:min-h-[calc(100vh-82px)]"
+          className="w-full lg:w-[62%] relative h-[300px] sm:h-[400px] lg:h-auto lg:min-h-[calc(100vh-82px)]"
           data-aos="fade-right"
         >
           {/* Carousel — outline draws 10px inside, not clipped by overflow-hidden */}
@@ -64,7 +64,7 @@ const Hero = ({ setIsOpen }) => {
                     src={src}
                     alt={`Shriram Park 63 ${idx + 1}`}
                     fill
-                    className="object-cover"
+                    className="object-contain lg:object-cover"
                     priority={idx === 0}
                     sizes="(max-width: 1024px) 100vw, 62vw"
                   />
