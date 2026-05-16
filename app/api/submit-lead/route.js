@@ -5,14 +5,14 @@
 // ═══════════════════════════════════════════════════════════════
 
 /* ─── CONFIG ─────────────────────────────────────────────────── */
-import * as lnt     from '../../../lib/lnt-island-cove-mahim/config'
-import * as optima  from '../../../lib/optima-rajarhat/config'
-import * as shriram from '../../../lib/shriram-codename-pudhiya/config'
+import * as optima   from '../../../lib/optima-rajarhat/config'
+import * as shriram  from '../../../lib/shriram-codename-pudhiya/config'
+import * as park63   from '../../../lib/shriram-park-63/config'
 
 const PROJECTS = {
-  [lnt.PROJECT_ID]:     lnt,
   [optima.PROJECT_ID]:  optima,
   [shriram.PROJECT_ID]: shriram,
+  [park63.PROJECT_ID]:  park63,
 }
 /* ────────────────────────────────────────────────────────────── */
 
