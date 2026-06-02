@@ -80,6 +80,13 @@ const Footer = () => (
         </Link>
       </div>
     </div>
+
+    {/* Disclaimer Section */}
+    <div style={{ padding: '16px 24px', textAlign: 'center', borderTop: '1px solid #222', background: 'rgba(0,0,0,0.2)' }}>
+      <p style={{ fontSize: '11px', color: '#777', fontFamily: F_SANS, margin: 0, lineHeight: 1.5, maxWidth: '1200px', margin: '0 auto' }}>
+        Advertisement is an invitation to offer and shall not be construed as an offer or contract. Prices subject to change without notice. All taxes extra as applicable.
+      </p>
+    </div>
   </footer>
 );
 
