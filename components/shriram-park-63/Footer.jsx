@@ -83,8 +83,8 @@ const Footer = () => (
 
     {/* Disclaimer Section */}
     <div style={{ padding: '16px 24px', textAlign: 'center', borderTop: '1px solid #222', background: 'rgba(0,0,0,0.2)' }}>
-      <p style={{ fontSize: '11px', color: '#777', fontFamily: F_SANS, margin: 0, lineHeight: 1.5, maxWidth: '1200px', margin: '0 auto' }}>
-        Advertisement is an invitation to offer and shall not be construed as an offer or contract. Prices subject to change without notice. All taxes extra as applicable.
+      <p style={{ fontSize: '11px', color: '#777', fontFamily: F_SANS, margin: 0, lineHeight: 1.5, maxWidth: '1200px', margin: '0 auto', textAlign: 'justify' }}>
+        <strong>Disclaimer:</strong> This is not the official website of the developer. The information depicted herein, including master plans, floor plans, furniture layout, fittings, illustrations, specifications, designs, dimensions, rendered views, colours, amenities and facilities etc., are subject to change without notification as may be required by the relevant authorities or the Developer's architect. This advertisement is an invitation to offer and shall not be construed as an offer or contract. * Prices subject to change without notice. All taxes extra as applicable.
       </p>
     </div>
   </footer>
