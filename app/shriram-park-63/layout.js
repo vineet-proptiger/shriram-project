@@ -1,5 +1,8 @@
 import './shriram-park-63-theme.css'
 
+import Script from 'next/script'
+import { CITY_DISPLAY } from '../../lib/shriram-park-63/config'
+
 export const metadata = {
   title: "Shriram Park 63 | Uber Luxury 3 BHK Apartments Perungalathur Chennai — Price Starting ₹1.51 Cr*",
   description:
@@ -7,5 +10,15 @@ export const metadata = {
 }
 
 export default function ShriramPark63Layout({ children }) {
-  return children
+  return (
+    <>
+      <Script id="gtag-park-63" strategy="beforeInteractive">{`
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({ 'city': '${CITY_DISPLAY}' });
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+      `}</Script>
+      {children}
+    </>
+  )
 }

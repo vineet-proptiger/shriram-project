@@ -4,6 +4,7 @@ import localFont from "next/font/local";
 import { GoogleTagManager } from "@next/third-parties/google";
 import Script from "next/script";
 
+
 const openSans = Open_Sans({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],

@@ -1,5 +1,8 @@
 import './mudra-theme.css'
 
+import Script from 'next/script'
+import { CITY_DISPLAY } from '../../lib/shriram-mudra-122-west/config'
+
 export const metadata = {
   title: 'Shriram Mudra | 2, 2.5 & 3 BHK Apartments in Mangadu, Chennai | Shriram Properties',
   description:
@@ -7,5 +10,15 @@ export const metadata = {
 }
 
 export default function ShriramMudraLayout({ children }) {
-  return children
+  return (
+    <>
+      <Script id="gtag-mudra" strategy="beforeInteractive">{`
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({ 'city': '${CITY_DISPLAY}' });
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+      `}</Script>
+      {children}
+    </>
+  )
 }
