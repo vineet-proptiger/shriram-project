@@ -5,8 +5,7 @@ const F_SANS = 'var(--font-sans), Open Sans, sans-serif'
 const RED = '#EB2027'
 
 const rows = [
-  { config: '1 BHK', size: '605 – 700',   price: '₹ 32 Lakhs*' },
-  { config: '2 BHK', size: '935 - 937',   price: 'On Request'   },
+  { config: '2 BHK', size: '935 - 937',   price: '₹ 45 Lakhs*'  },
   { config: '3 BHK', size: '1328 - 1354', price: 'On Request'   },
 ]
 

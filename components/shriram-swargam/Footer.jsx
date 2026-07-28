@@ -28,7 +28,7 @@ const Footer = () => (
         fontSize: '14px', color: '#bbb', fontFamily: F_SANS, lineHeight: 1.8,
         marginBottom: '0', textAlign: 'center',
       }}>
-        Shriram Codename Pudhiya is a premium residential project by Shriram Properties, offering 1, 2 &amp; 3 BHK homes starting ₹32 Lakhs* at Thirumazhisai, Chennai. Spread across 8.9 acres with 7 towers, 1,053 apartments, and 45+ modern amenities — designed for a complete, vibrant lifestyle in West Chennai.
+        Shriram Codename Pudhiya is a premium residential project by Shriram Properties, offering 2 &amp; 3 BHK homes starting ₹45 Lakhs* at Thirumazhisai, Chennai. Spread across 8.9 acres with 7 towers, 1,053 apartments, and 45+ modern amenities — designed for a complete, vibrant lifestyle in West Chennai.
       </p>
     </div>
 

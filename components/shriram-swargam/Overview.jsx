@@ -23,7 +23,7 @@ const Overview = ({ setIsOpen }) => {
             fontFamily: F_SANS, fontSize: '14.5px', lineHeight: '1.85',
             color: '#4b5563', margin: '0 0 18px',
           }}>
-            Shriram Codename Pudhiya offers premium 1, 2 &amp; 3 BHK homes starting from ₹32 Lakhs* in the fast-growing corridor of Thirumazhisai near Poonamallee. Spread across 8.9 acres with 7 towers and 1,053 thoughtfully designed apartments, the project features 75% open space and a 12,000 sq. ft. clubhouse with 45+ modern amenities for a complete lifestyle experience.
+            Shriram Codename Pudhiya offers premium 2 &amp; 3 BHK homes starting from ₹45 Lakhs* in the fast-growing corridor of Thirumazhisai near Poonamallee. Spread across 8.9 acres with 7 towers and 1,053 thoughtfully designed apartments, the project features 75% open space and a 12,000 sq. ft. clubhouse with 45+ modern amenities for a complete lifestyle experience.
           </p>
           <p style={{
             fontFamily: F_SANS, fontSize: '14.5px', lineHeight: '1.85',

@@ -56,7 +56,7 @@ export default function Hero({ setIsOpen }) {
             <h2 style={{
               fontFamily: F_JOST, fontSize: 'clamp(14px, 1.6vw, 20px)', fontWeight: '700',
               color: '#ffffff', margin: '0 0 12px',
-            }}>Luxurious 1, 2 and 3 BHK Apartments</h2>
+            }}>Luxurious 2 and 3 BHK Apartments</h2>
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: '5px', marginBottom: '18px' }}>
               {highlights.map((item, i) => (
@@ -71,7 +71,7 @@ export default function Hero({ setIsOpen }) {
 
             <div style={{ marginBottom: '4px' }}>
               <p style={{ fontFamily: F_SANS, fontSize: '12px', fontWeight: '500', color: 'rgba(255,255,255,0.70)', margin: '0 0 2px' }}>Starts at</p>
-              <p style={{ fontFamily: F_JOST, fontSize: 'clamp(26px, 3vw, 36px)', fontWeight: '700', color: RED, margin: 0, lineHeight: 1, textShadow: '0 2px 8px rgba(0,0,0,0.5)' }}>32 Lakhs*</p>
+              <p style={{ fontFamily: F_JOST, fontSize: 'clamp(26px, 3vw, 36px)', fontWeight: '700', color: RED, margin: 0, lineHeight: 1, textShadow: '0 2px 8px rgba(0,0,0,0.5)' }}>45 Lakhs*</p>
             </div>
           </div>
         </div>
@@ -115,11 +115,11 @@ export default function Hero({ setIsOpen }) {
           <h2 style={{
             fontFamily: F_JOST, fontSize: '14px', fontWeight: '700',
             color: '#fff', margin: '0 0 6px',
-          }}>Luxurious 1, 2 and 3 BHK Apartments</h2>
+          }}>Luxurious 2 and 3 BHK Apartments</h2>
 
           <div style={{ marginBottom: '0' }}>
             <p style={{ fontFamily: F_SANS, fontSize: '11px', fontWeight: '500', color: 'rgba(255,255,255,0.70)', margin: '0 0 1px' }}>Starts at</p>
-            <p style={{ fontFamily: F_JOST, fontSize: '28px', fontWeight: '700', color: RED, margin: 0, lineHeight: 1, textShadow: '0 2px 6px rgba(0,0,0,0.5)' }}>32 Lakhs*</p>
+            <p style={{ fontFamily: F_JOST, fontSize: '28px', fontWeight: '700', color: RED, margin: 0, lineHeight: 1, textShadow: '0 2px 6px rgba(0,0,0,0.5)' }}>45 Lakhs*</p>
           </div>
         </div>
       </div>
