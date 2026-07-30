@@ -33,6 +33,13 @@ const nephilm = localFont({
 });
 
 
+export const metadata = {
+  metadataBase: new URL("https://shriramprojects.in"),
+  title: "Shriram Properties | Premium Residential Projects in Chennai",
+  description:
+    "Explore premium residential apartments and townships by Shriram Properties in Chennai including Shriram Mudra, Shriram Park 63, and Shriram Swargam.",
+};
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
