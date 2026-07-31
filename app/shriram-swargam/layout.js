@@ -21,7 +21,6 @@ export const metadata = {
 export default function ShriramCodenamePudhiyaLayout({ children }) {
   return (
     <>
-      {/* GTM-575H8R87 is loaded globally from app/layout.js. */}
       <Script id="gtm-p899fkzc" strategy="afterInteractive">{`
         (function(w,d,s,l,i){
           w[l]=w[l]||[];
