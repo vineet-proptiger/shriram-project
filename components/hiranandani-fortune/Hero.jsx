@@ -44,7 +44,7 @@ const Hero = () => {
           z-index: 10;
           padding: 80px 80px 24px 44px;
           width: 100%;
-          max-width: 800px;
+          max-width: 1200px;
           background: radial-gradient(
             100% 100% at 0% 100%,
             rgba(0,0,0,0.95) 0%,
@@ -57,12 +57,13 @@ const Hero = () => {
         /* Main title */
         .hero-title {
           font-family: var(--font-jost), Montserrat, sans-serif;
-          font-size: clamp(20px, 3vw, 40px);
+          font-size: clamp(20px, 2.8vw, 42px);
           font-weight: 800;
           color: #fff;
           text-transform: uppercase;
           letter-spacing: 0.03em;
           line-height: 1.08;
+          white-space: nowrap;
           margin: 0 0 6px;
           text-shadow: 0 2px 16px rgba(0,0,0,0.5);
         }
@@ -324,6 +325,7 @@ const Hero = () => {
             .hero-title {
               color: #FF2328 !important;
               text-shadow: none !important;
+              white-space: normal !important;
             }
             .hero-subtitle, .hero-price-line, .hero-price-amt, .hero-bullet-text, .hero-price-digits {
               color: #ffffff !important;
@@ -419,7 +421,7 @@ const Hero = () => {
 
         {/* Main Heading */}
         <h1 className="hero-title" style={{ marginBottom: '8px' }}>
-          SHRIRAM PROPERTIES
+          SHRIRAM PROPERTIES in Chennai
         </h1>
         <p className="hero-subtitle" style={{ fontSize: 'clamp(15px, 2vw, 24px)', fontWeight: '600', fontStyle: 'italic', letterSpacing: '0.04em', color: '#ffffff', opacity: '0.95', textTransform: 'none', margin: 0 }}>
           Homes that live in you

@@ -38,7 +38,7 @@ const ProjectCards = () => {
         {/* Section Header */}
         <div className="text-center mb-14" data-aos="fade-up">
           <h2 className="text-[26px] sm:text-[34px] md:text-[40px] font-extrabold text-[#111827] uppercase tracking-wide mb-3" style={{ fontFamily: F_JOST }}>
-            Our Featured Projects
+            Shriram Projects in Chennai 
           </h2>
           <div className="flex items-center justify-center mb-4">
             <div className="w-16 h-[2px] bg-[#FF2328]/30"></div>
