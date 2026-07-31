@@ -6,7 +6,7 @@ import { heroImages } from "../../lib/shriram-mudra-122-west/images";
 const F_JOST = "var(--font-jost), Montserrat, sans-serif";
 const F_SANS = "var(--font-sans), Open Sans, sans-serif";
 
-const slides = [heroImages.banner, heroImages.banner2];
+const slides = [heroImages.banner];
 
 const BRAND = "var(--color-primary)";
 const BRAND_DARK = "var(--color-primary-dark)";
