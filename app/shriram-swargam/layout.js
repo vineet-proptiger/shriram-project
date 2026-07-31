@@ -21,8 +21,8 @@ export const metadata = {
 export default function ShriramCodenamePudhiyaLayout({ children }) {
   return (
     <>
-      {/* GTM-P899FKZC — injected into <head> via beforeInteractive */}
-      <Script id="gtm-p899fkzc" strategy="beforeInteractive">{`
+      {/* GTM-P899FKZC — loads after page interactive (Next.js docs-compliant for nested layouts) */}
+      <Script id="gtm-p899fkzc" strategy="afterInteractive">{`
         (function(w,d,s,l,i){
           w[l]=w[l]||[];
           w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
