@@ -1,4 +1,5 @@
 import './shriram-theme.css'
+import { GoogleTagManager } from '@next/third-parties/google'
 import { CITY_DISPLAY } from '../../lib/shriram-swargam/config'
 import Script from 'next/script'
 
@@ -21,26 +22,13 @@ export const metadata = {
 export default function ShriramCodenamePudhiyaLayout({ children }) {
   return (
     <>
-      <Script id="gtm-p899fkzc" strategy="afterInteractive">{`
-        (function(w,d,s,l,i){
-          w[l]=w[l]||[];
-          w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
-          w[l].push({ city: ${JSON.stringify(CITY_DISPLAY)} });
-          var f=d.getElementsByTagName(s)[0],j=d.createElement(s),
-          dl=l!='dataLayer'?'&l='+l:'';
-          j.async=true;
-          j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
-          f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','GTM-P899FKZC');
+      {/* GTM script → <head> me, noscript iframe → <body> me — automatically */}
+      <GoogleTagManager gtmId="GTM-P899FKZC" />
+      {/* City push to dataLayer */}
+      <Script id="gtm-city-push" strategy="beforeInteractive">{`
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({ city: ${JSON.stringify(CITY_DISPLAY)} });
       `}</Script>
-      <noscript>
-        <iframe
-          src="https://www.googletagmanager.com/ns.html?id=GTM-P899FKZC"
-          height="0"
-          width="0"
-          style={{ display: 'none', visibility: 'hidden' }}
-        />
-      </noscript>
       {children}
     </>
   )
