@@ -22,13 +22,30 @@ export const metadata = {
 export default function ShriramCodenamePudhiyaLayout({ children }) {
   return (
     <>
+      {/* Old GTM */}
       <GoogleTagManager gtmId="GTM-575H8R87" />
+      {/* New GTM */}
+      <GoogleTagManager gtmId="GTM-P899FKZC" />
       <Script id="gtag-shriram" strategy="beforeInteractive">{`
         window.dataLayer = window.dataLayer || [];
-window.dataLayer.push({ 'city': '${CITY_DISPLAY}' });
+        window.dataLayer.push({ 'city': '${CITY_DISPLAY}' });
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
       `}</Script>
+      <noscript>
+        <iframe
+          src="https://www.googletagmanager.com/ns.html?id=GTM-575H8R87"
+          height="0"
+          width="0"
+          style={{ display: 'none', visibility: 'hidden' }}
+        />
+        <iframe
+          src="https://www.googletagmanager.com/ns.html?id=GTM-P899FKZC"
+          height="0"
+          width="0"
+          style={{ display: 'none', visibility: 'hidden' }}
+        />
+      </noscript>
       {children}
     </>
   )
