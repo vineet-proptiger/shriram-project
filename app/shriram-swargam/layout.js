@@ -25,8 +25,8 @@ export default function ShriramCodenamePudhiyaLayout({ children }) {
       <Script id="gtm-p899fkzc" strategy="afterInteractive">{`
         (function(w,d,s,l,i){
           w[l]=w[l]||[];
-          w[l].push({ city: ${JSON.stringify(CITY_DISPLAY)} });
           w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
+          w[l].push({ city: ${JSON.stringify(CITY_DISPLAY)} });
           var f=d.getElementsByTagName(s)[0],j=d.createElement(s),
           dl=l!='dataLayer'?'&l='+l:'';
           j.async=true;
