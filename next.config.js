@@ -5,7 +5,12 @@ const nextConfig = {
     return config
   },
   async rewrites() {
-    return []
+    return [
+      {
+        source: '/campaign',
+        destination: '/campaign/index.html',
+      },
+    ]
   },
 }
 module.exports = nextConfig
