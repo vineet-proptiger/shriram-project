@@ -31,18 +31,20 @@ const EarlyForm = () => {
 
   const handle = (e) => {
     const { name, value } = e.target
-    setForm({ ...form, [name]: name === 'phone' ? value.replace(/\D/g, '') : value })
+    setForm({ ...form, [name]: name === 'phone' ? value.replace(/\D/g, '').slice(0, 10) : value })
   }
 
   const submit = async (e) => {
     e.preventDefault()
-    if (!/^\d{10}$/.test(form.phone)) { setError('Enter valid 10-digit number'); return }
+    if (form.phone.length !== 10) { setError('Please enter a valid 10-digit mobile number.'); return }
+    if (!/^[6-9]\d{9}$/.test(form.phone)) { setError('Mobile number must start with 6, 7, 8, or 9.'); return }
     setError(''); setLoading(true)
     const tracking = buildTrackingFields()
+    const fullPhone = '+91' + form.phone
     const payload = new FormData()
     payload.append('fullname', form.fullname)
     payload.append('email', form.email)
-    payload.append('phone', form.phone)
+    payload.append('phone', fullPhone)
     payload.append('projectId', PROJECT_ID)
     payload.append('projectName', PROJECT_NAME)
     payload.append('form_name', 'Overview Form')
@@ -61,7 +63,7 @@ const EarlyForm = () => {
           window.dataLayer.push({
             event: 'lead_submit_success', form_name: 'Overview Form',
             user_data: {
-              email: form.email.trim() || undefined, phone: `+91${form.phone}`,
+              email: form.email.trim() || undefined, phone: fullPhone,
               first_name: nameParts[0] || '', last_name: nameParts.slice(1).join(' ') || ''
             }
           })
@@ -90,15 +92,15 @@ const EarlyForm = () => {
   return (
     <form onSubmit={submit} style={{ display: 'flex', flexDirection: 'column', gap: '14px', height: '100%' }}>
       {[
-        { name: 'fullname', label: 'Full Name', placeholder: 'Enter your full name', required: true },
-        { name: 'email', label: 'Email Address', placeholder: 'Email Id (optional)', required: false },
-        { name: 'phone', label: 'Mobile Number', placeholder: '10-digit mobile number', required: true, maxLength: 10 },
+        { name: 'fullname', label: 'Full Name', placeholder: 'Enter your full name', required: true, type: 'text' },
+        { name: 'email', label: 'Email Address', placeholder: 'Email Id (optional)', required: false, type: 'email' },
+        { name: 'phone', label: 'Mobile Number', placeholder: '10-digit mobile number', required: true, maxLength: 10, type: 'tel' },
       ].map(f => (
         <div key={f.name}>
           <label style={{ display: 'block', fontSize: '11px', fontWeight: '700', color: '#6b7280', fontFamily: F_JOST, letterSpacing: '0.06em', textTransform: 'uppercase', marginBottom: '5px' }}>
             {f.label} {f.required && <span style={{ color: GOLD }}>*</span>}
           </label>
-          <input name={f.name} required={f.required} value={form[f.name]} onChange={handle}
+          <input type={f.type || 'text'} name={f.name} required={f.required} value={form[f.name]} onChange={handle}
             placeholder={f.placeholder} maxLength={f.maxLength}
             onFocus={() => setFocused(f.name)} onBlur={() => setFocused('')}
             style={{

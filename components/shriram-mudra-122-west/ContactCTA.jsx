@@ -16,17 +16,19 @@ const ContactCTA = () => {
 
   const handle = (e) => {
     const { name, value } = e.target
-    setForm({ ...form, [name]: name === 'phone' ? value.replace(/\D/g, '') : value })
+    setForm({ ...form, [name]: name === 'phone' ? value.replace(/\D/g, '').slice(0, 10) : value })
   }
 
   const submit = async (e) => {
     e.preventDefault()
-    if (!/^\d{10}$/.test(form.phone)) { setError('Enter valid 10-digit number'); return }
+    if (form.phone.length !== 10) { setError('Please enter a valid 10-digit mobile number.'); return }
+    if (!/^[6-9]\d{9}$/.test(form.phone)) { setError('Mobile number must start with 6, 7, 8, or 9.'); return }
     setError(''); setLoading(true)
     const tracking = buildTrackingFields()
+    const fullPhone = '+91' + form.phone
     const payload = new FormData()
     payload.append('fullname', form.fullname)
-    payload.append('phone', form.phone)
+    payload.append('phone', fullPhone)
     payload.append('email', form.email || '')
     payload.append('projectId', PROJECT_ID)
     payload.append('projectName', PROJECT_NAME)
@@ -46,7 +48,7 @@ const ContactCTA = () => {
           window.dataLayer.push({
             event: 'lead_submit_success', form_name: 'Contact CTA Form',
             user_data: {
-              email: form.email.trim() || undefined, phone: `+91${form.phone}`,
+              email: form.email.trim() || undefined, phone: fullPhone,
               first_name: nameParts[0] || '', last_name: nameParts.slice(1).join(' ') || ''
             }
           })
@@ -137,7 +139,7 @@ const ContactCTA = () => {
                   }}>
                     Mobile Number <span style={{ color: TEAL }}>*</span>
                   </label>
-                  <input name="phone" required value={form.phone} onChange={handle}
+                  <input type="tel" name="phone" required value={form.phone} onChange={handle}
                     placeholder="10-digit mobile number" maxLength={10}
                     className="form-input" style={{ fontFamily: F_SANS, width: '100%' }} />
                 </div>

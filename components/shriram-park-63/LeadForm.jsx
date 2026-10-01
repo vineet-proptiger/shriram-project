@@ -17,18 +17,20 @@ const LeadForm = ({ formName = 'Hero Form', btnText = 'Submit Details' }) => {
 
   const handleChange = (e) => {
     const { name, value } = e.target
-    setFormData({ ...formData, [name]: name === 'phone' ? value.replace(/\D/g, '') : value })
+    setFormData({ ...formData, [name]: name === 'phone' ? value.replace(/\D/g, '').slice(0, 10) : value })
   }
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    if (!/^\d{10}$/.test(formData.phone)) { setError('Please enter a valid 10-digit mobile number.'); return }
+    if (formData.phone.length !== 10) { setError('Please enter a valid 10-digit mobile number.'); return }
+    if (!/^[6-9]\d{9}$/.test(formData.phone)) { setError('Mobile number must start with 6, 7, 8, or 9.'); return }
     setError(''); setLoading(true)
     const tracking = buildTrackingFields()
+    const fullPhone = '+91' + formData.phone
     const payload = new FormData()
     payload.append('fullname', formData.fullname)
     payload.append('email', formData.email)
-    payload.append('phone', formData.phone)
+    payload.append('phone', fullPhone)
     payload.append('projectId', PROJECT_ID)
     payload.append('projectName', PROJECT_NAME)
     payload.append('form_name', formName)
@@ -47,7 +49,7 @@ const LeadForm = ({ formName = 'Hero Form', btnText = 'Submit Details' }) => {
           window.dataLayer.push({
             event: 'lead_submit_success', form_name: formName,
             user_data: {
-              email: formData.email.trim() || undefined, phone: `+91${formData.phone}`,
+              email: formData.email.trim() || undefined, phone: fullPhone,
               first_name: nameParts[0] || '', last_name: nameParts.slice(1).join(' ') || ''
             }
           })
